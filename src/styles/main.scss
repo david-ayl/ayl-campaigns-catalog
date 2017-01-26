@@ -1,0 +1,25 @@
+$deepblue : #232342;
+
+body{
+        margin:0;
+        font-size:1em;
+        font-family:'Verdana', arial, sans-serif;
+}
+
+.tile{
+        float:left;
+        background-color:#f1f1f1;
+        padding:5px;
+        margin:15px;
+        .title{
+                text-align:center;
+        }
+        .id{
+                padding:5px;
+                background-color:$deepblue;
+                color:#cccccc;
+                text-align:center;
+                font-family:'Courier New', Courier, monospace;
+                font-size:12px;
+        }
+}

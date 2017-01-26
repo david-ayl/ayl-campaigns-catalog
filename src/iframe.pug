@@ -1,0 +1,18 @@
+doctype html
+html(lang="fr")
+        head
+                meta(charset="utf-8")
+                title Campaign
+                style(type="text/css").
+                        body{
+                                margin:0;
+                                padding:0;
+                        }
+        body
+                script(type="text/javascript").
+                        var camp = window.frameElement.getAttribute('data-camp');
+                        var o = document.createElement('script');
+                        o.setAttribute('src', '//fo-api.omnitagjs.com/fo-api/ot.js?Placement=469c1aab587300f0fdd83cd63e8f6bc4&Campaign=' + camp);
+                        o.setAttribute('type', 'text/javascript');
+                        o.setAttribute('async','true');
+                        document.body.appendChild(o);
