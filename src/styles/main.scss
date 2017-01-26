@@ -31,9 +31,12 @@ li{
                 font-size:12px;
         }
 }
-.sorter{
-        padding:2px 6px;
-        background-color:$deepblue;
-        color:$light;
-        margin:2px;
+.nav{
+
+        .sorter{
+                padding:2px 6px;
+                background-color:$deepblue;
+                color:$light;
+                margin:2px;
+        }
 }
