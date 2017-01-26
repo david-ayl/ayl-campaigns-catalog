@@ -105,7 +105,7 @@
                 'display': 'inline-block',
                 'padding': 0,
                 'position': 'relative',
-                'border': options.css.border.width + 'px solid ' + options.css.border.color,
+                //'border': options.css.border.width + 'px solid ' + options.css.border.color,
                 'margin': options.css.margin
             });
 

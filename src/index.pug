@@ -7,22 +7,25 @@ html(lang="fr")
                 link(rel="shortcut icon", href="img/favicon.ico", type="image/x-icon")
         body
                 -
-                        var tags = [
-                        //- Languages
-                        "french",
-                        "english",
-                        "spanish",
-                        "italian",
-                        //- kind
-                        "traffic",
-                        "video",
-                        //- topic
-                        "women",
-                        "cars",
-                        "hightech",
-                        "bank",
-                        "trade"
-                        ];
+                        var tags = {
+                                languages : [
+                                        "french",
+                                        "english",
+                                        "spanish",
+                                        "italian"
+                                ],
+                                type : [
+                                        "traffic",
+                                        "video"
+                                ],
+                                topic : [
+                                        "women",
+                                        "cars",
+                                        "hightech",
+                                        "bank",
+                                        "trade"
+                                ]
+                        };
                 -
                         var campaigns = [{
                                 name : "Van Cleef & Arpels",
@@ -50,7 +53,7 @@ html(lang="fr")
                                 id : "43322cc8b4338698b48864ea98809ad7"
                         },{
                                 name : "Carrefour",
-                                tags : ["french", "traffic", "Commerce"],
+                                tags : ["french", "traffic", "trade"],
                                 id : "66e83956ffc2e99635ab70636be3f0a6"
                         }];
                 mixin campaigns(items)
@@ -58,17 +61,19 @@ html(lang="fr")
                                 li.tile(class= val.tags.join(" "))
                                         h3.title!= val.name
                                         pre.id!= val.id
-                                        iframe(scrolling="no", data-lang!=val.lang data-kind!=val.kind data.topic!=val.topic class="frame", width="300", height="250", frameBorder="0", src="iframe.html", data-camp!= val.id)
+                                        iframe(scrolling="no", class="frame", width="300", height="250", frameBorder="0", src="iframe.html", data-camp!= val.id)
 
 
                 mixin nav(items)
+                        - i = 0;
                         each item in items
-                                buttons.sorter(data-filter=item)!= item
+                                each val in item
+                                        buttons.sorter(class=Object.keys(items)[i], data-filter=val)!= val
+                                - i++
 
                 .nav
                         +nav(tags)
-
-                ul(style="width:75%;margin:50px auto;")#wrapper
+                ul#wrapper
                         +campaigns(campaigns)
 
                 script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js", type="text/javascript")

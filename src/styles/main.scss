@@ -1,12 +1,20 @@
 $deepblue : #232342;
+$light : #f1f1f1;
 
 body{
         margin:0;
+        padding:0;
         font-size:1em;
         font-family:'Verdana', arial, sans-serif;
 }
-
+li{
+        list-style-type: none;
+}
 .tile{
+        .frame{
+                display:block;
+                margin:0 auto;
+        }
         float:left;
         background-color:#f1f1f1;
         padding:5px;
@@ -22,4 +30,10 @@ body{
                 font-family:'Courier New', Courier, monospace;
                 font-size:12px;
         }
+}
+.sorter{
+        padding:2px 6px;
+        background-color:$deepblue;
+        color:$light;
+        margin:2px;
 }
