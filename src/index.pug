@@ -2,66 +2,22 @@ doctype html
 html(lang="fr")
         head
                 meta(charset="utf-8")
-                title Catalogue de campagne
+                title Catalogue de campagnes
                 link(rel="stylesheet", media="all", href="styles/main.css")
                 link(rel="shortcut icon", href="img/favicon.ico", type="image/x-icon")
         body
-                -
-                        var tags = {
-                                languages : [
-                                        "french",
-                                        "english",
-                                        "spanish",
-                                        "italian"
-                                ],
-                                type : [
-                                        "traffic",
-                                        "video"
-                                ],
-                                topic : [
-                                        "women",
-                                        "cars",
-                                        "hightech",
-                                        "bank",
-                                        "trade"
-                                ]
-                        };
-                -
-                        var campaigns = [{
-                                name : "Van Cleef & Arpels",
-                                tags : ["french", "traffic", "women"],
-                                id : "9aa5a069d9b888f9ce624f084559a592"
-                        },{
-                                name : "Poison Girls",
-                                tags : ["french", "traffic", "women"],
-                                id : "4eefe309c1a2d8f75b5d12920e6f25d0"
-                        },{
-                                name : "Ducati",
-                                tags : ["french", "traffic", "cars"],
-                                id : "8de4501fda7e127447f3ec25c5472f77"
-                        },{
-                                name : "Citroen DS3",
-                                tags : ["french", "traffic", "cars"],
-                                id : "f6e5c2ed162002f890b3102e06f2b38f"
-                        },{
-                                name : "ING",
-                                tags : ["french", "traffic", "bank"],
-                                id : "80391e6327760f97f0a0296b474bd13d"
-                        },{
-                                name : "Parrot",
-                                tags : ["french", "traffic", "hightech"],
-                                id : "43322cc8b4338698b48864ea98809ad7"
-                        },{
-                                name : "Carrefour",
-                                tags : ["french", "traffic", "trade"],
-                                id : "66e83956ffc2e99635ab70636be3f0a6"
-                        }];
+                include parts/campaigns.pug
+
                 mixin campaigns(items)
                         each val, index in items
                                 li.tile(class= val.tags.join(" "))
                                         h3.title!= val.name
                                         pre.id!= val.id
-                                        iframe(scrolling="no", class="frame", width="300", height="250", frameBorder="0", src="iframe.html", data-camp!= val.id)
+                                        iframe(scrolling="no", class="frame invisible", width="300", height="250", frameBorder="0", data-src="iframe.html" data-camp!= val.id)
+                                        .tags-wrapper
+                                                each value in val.tags
+                                                        i(class="icon-" + value)
+                                        .trigger click to see campaign
 
 
                 mixin nav(items)
