@@ -26,7 +26,7 @@ gulp.task('html:watch', function() {
 
 gulp.task('img', function() {
         gulp.src('src/images/*.{jpeg,jpg,gif,ico,png}')
-        .pipe(gulp.dest('dist/img/'))
+        .pipe(gulp.dest('dist/images/'))
 });
 
 gulp.task('img:watch', function() {
