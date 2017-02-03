@@ -8,11 +8,13 @@ html(lang="fr")
         body
                 include parts/campaigns.pug
 
+
                 mixin campaigns(items)
                         each val, index in items
                                 li.tile(class= val.tags.join(" "))
-                                        h3.title!= val.name
-                                        pre.id!= val.id
+                                        .info
+                                                h3.title!= val.name
+                                                pre.id!= val.id
                                         iframe(scrolling="no", class="frame invisible", width="300", height="250", frameBorder="0", data-src="iframe.html" data-camp!= val.id)
                                         .tags-wrapper
                                                 each value in val.tags
@@ -29,8 +31,9 @@ html(lang="fr")
 
                 .nav
                         +nav(tags)
-                ul#wrapper
-                        +campaigns(campaigns)
+                #main-container
+                        ul#wrapper
+                                +campaigns(campaigns)
 
                 script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js", type="text/javascript")
                 script(src="scripts/sdFilterMe.js", type="text/javascript")
