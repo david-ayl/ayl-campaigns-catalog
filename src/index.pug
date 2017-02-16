@@ -25,12 +25,14 @@ html(lang="fr")
                 mixin nav(items)
                         - i = 0;
                         each item in items
-                                each val in item
-                                        buttons.sorter(class=Object.keys(items)[i], data-filter=val)!= val
-                                - i++
-
-                .nav
-                        +nav(tags)
+                                div(class=Object.keys(items)[i])
+                                        each val in item
+                                                buttons.sorter(class=Object.keys(items)[i], data-filter=val)!= val
+                                        - i++
+                header
+                        img#logo(src="images/logo.png")
+                        .nav
+                                +nav(tags)
                 #main-container
                         ul#wrapper
                                 +campaigns(campaigns)
