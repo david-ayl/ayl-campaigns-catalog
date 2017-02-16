@@ -11,15 +11,14 @@ html(lang="fr")
 
                 mixin campaigns(items)
                         each val, index in items
-                                li.tile(class= val.tags.join(" "))
+                                li.tile(class!= val.tags.join(" "))
                                         .info
                                                 h3.title!= val.name
                                                 pre.id!= val.id
-                                        iframe(scrolling="no", class="frame invisible", width="300", height="250", frameBorder="0", data-src="iframe.html" data-camp!= val.id)
                                         .tags-wrapper
                                                 each value in val.tags
                                                         i(class="icon-" + value)
-                                        .trigger click to see campaign
+                                        .trigger click to see campaigns
 
 
                 mixin nav(items)
@@ -34,6 +33,11 @@ html(lang="fr")
                 #main-container
                         ul#wrapper
                                 +campaigns(campaigns)
+
+                div#overflay-iframe-container
+                        div.iframe-container(scrolling="no", frameborder="0")
+                                #close-iframe close
+                                iframe.campaign-iframe
 
                 script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js", type="text/javascript")
                 script(src="scripts/sdFilterMe.js", type="text/javascript")
