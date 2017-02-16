@@ -2,17 +2,28 @@
 
 $(document).ready(function() {
 
+        var displayCamp = function(e) {
+                var el = e.target
+                var id = $(el).closest('.tile').find('.id').html();
+                $('#overflay-iframe-container').addClass('visible');
+                $('.campaign-iframe').attr({
+                        'src' : 'iframe.html',
+                        'data-camp' : id
+                });
+        };
 
-        $('.languages:last').addClass('last');
-        $('.type:last').addClass('last');
-        $('.topic:last').addClass('last');
-        $(document).on('click', '.trigger', function() {
-                var iFrame = $(this).closest('.tile').find('.invisible');
-                if(iFrame) {
-                        iFrame.removeClass('invisible');
-                        iFrame.attr('src', 'iframe.html');
-                };
-        });
+        var removeCamp = function() {
+                $('#overflay-iframe-container').removeClass('visible');
+                $('.campaign-iframe').attr({
+                        'src' : '',
+                        'data-camp' : ''
+                });
+        }
+
+        $(document)
+        .on('click', '.trigger', displayCamp)
+        .on('click', '#close-iframe', removeCamp);
+
 
         $('#wrapper').sdFilterMe({
                 filterSelector: '.sorter',
