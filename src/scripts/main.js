@@ -4,7 +4,7 @@ $(document).ready(function() {
 
         var displayCamp = function(e) {
                 var el = e.target
-                var id = $(el).closest('.tile').find('.id').html();
+                var id = $(el).closest('li').find('.id').html();
                 $('#overflay-iframe-container').addClass('visible');
                 $('.campaign-iframe').attr({
                         'src' : 'iframe.html',
@@ -26,6 +26,8 @@ $(document).ready(function() {
 
 });
 
+
+/*MIXITUP LIB*/
 jQuery(document).ready(function($){
 
 	function triggerFilter($bool) {
@@ -37,7 +39,7 @@ jQuery(document).ready(function($){
 
 	//mobile version - detect click event on filters tab
 	var filter_tab_placeholder = $('.cd-tab-filter .placeholder a'),
-		filter_tab_placeholder_default_value = 'Select',
+	       filter_tab_placeholder_default_value = 'Select',
 		filter_tab_placeholder_text = filter_tab_placeholder.text();
 
 	$('.cd-tab-filter li').on('click', function(event){

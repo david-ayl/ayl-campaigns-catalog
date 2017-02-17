@@ -1,0 +1,28 @@
+
+@mixin clearLast() {
+        clear:both;
+        border-right:none !important;
+        &:after{
+                content:' ';
+                display:block;
+                clear:both;
+
+        }
+}
+
+@mixin centerAbsolute() {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translateX(-50%) translateY(-50%);
+}
+
+@mixin hoverStates() {
+        border-left:2px solid #222;
+        transition:all .5s cubic-bezier(.25,.8,.25,1);
+        &:hover{
+                background:#fff;
+                border-left:2px solid #222;
+                color:#222;
+        }
+}
