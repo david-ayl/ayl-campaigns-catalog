@@ -13,13 +13,14 @@
                 top:0;
                 left:0;
                 background-color:rgba(0,0,0,0.5);
+                z-index: 999;
         }
         .iframe-container{
                 @include centerAbsolute();
         }
         .campaign-iframe{
                 border:none;
-                width:300px;
-                height:350px;
+                width:735px;
+                height:200px;
         }
 }
