@@ -14,12 +14,13 @@ html(lang="fr")
                         each val, index in items
                                 li.mix(class!= val.tags.join(" ") + ' ' + val.name)
                                         div.mix-infos
-                                                .info
-                                                        h3.title!= val.name
-                                                        pre.id!= val.id
                                                 .tags-wrapper
                                                         each value in val.tags
                                                                 i(class="icon-" + value)
+                                                .info
+                                                        h3.title!= val.name
+                                                        pre.id!= val.id
+                                                
                                                 .trigger click to see
                                                 div.overlay-infos
                         - i = 0;

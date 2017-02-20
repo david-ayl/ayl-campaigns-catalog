@@ -63,13 +63,15 @@ li{
 	background-size:cover;
 	background-position: 50%;
 	.title{
-		font-size:1.5em;
-		width:80%;
+		font-size:1.25em;
+		width:90%;
 		color:$dark;
 		background:$white;
 		padding:.2em .5em;
 		margin-bottom:0;
 		text-align:left;
+		text-transform: uppercase;
+    	letter-spacing: 2px;
 	}
 	.id{
 		font-size: 1em;
@@ -89,10 +91,12 @@ li{
 		bottom:0;
 		right:-200px;
 		z-index:10;
-		-moz-transition:all .5s ease;
-        -webkit-transition:all .5s ease;
-        -o-transition:all .5s ease;
         transition:all .5s ease;
+	}
+	.tags-wrapper{
+		margin-top:55px;
+		margin-bottom:-20px;
+		transition:all .5s ease;
 	}
 	.tags-wrapper i{
 		background:none;
@@ -107,21 +111,42 @@ li{
 			z-index:10;
 			text-align:center;
 		}
+		&:nth-child(2){
+			background: $deepblue;
+    		font-size: 9px;
+    		padding: 3px;
+    		letter-spacing: 2px;
+    		font-weight: 800;
+    		margin-left:0;
+    		margin-bottom:5px;
+		}
+		&.icon-traffic{
+			background:$aylorange;
+		}
+		&.icon-video{
+			background:$deepblue;
+		}
+		&.icon-slideshow{
+			background:$aylgreen;
+		}
+		&:nth-child(3){
+			background:$darkblue;
+			font-size: 9px;
+    		padding: 3px;
+    		letter-spacing: 2px;
+    		font-weight: 800;
+		}
 	}
 	&:hover .trigger{
 		right:0;
 	}
-	&:hover .info{
-		margin-top:40px;
-		-moz-transition:all .5s ease;
-        -webkit-transition:all .5s ease;
-        -o-transition:all .5s ease;
-        transition:all .5s ease;
+	&:hover .tags-wrapper{
+        margin-top:30px;
 	}
 	.info{
-		margin-top: 70px;
 		position:relative;
 		z-index:10;
+		
 	}
 }
 

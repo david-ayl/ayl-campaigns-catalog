@@ -2,6 +2,7 @@
 $S:     480px;
 $M:     768px;
 $L:     1170px;
+$XL:    1900px;
 
 @mixin MQ($canvas) {
         @if $canvas == S {
@@ -12,6 +13,8 @@ $L:     1170px;
         }
         @else if $canvas == L {
                 @media only screen and (min-width: $L) { @content; }
+        }@else if $canvas == XL {
+                @media only screen and (min-width: $XL) { @content; }
         }
 }
 .cd-main-content {
@@ -67,6 +70,16 @@ $L:     1170px;
 
 		li {
 			width: 23%;
+		}
+
+		&.filter-is-visible {
+			width: 80%;
+		}
+	}
+	@include MQ(XL) {
+
+		li {
+			width: 16%;
 		}
 
 		&.filter-is-visible {
