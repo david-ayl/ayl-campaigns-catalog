@@ -1,17 +1,15 @@
 @font-face {
-        font-family: 'icomoon';
-        src:  url('../fonts/icomoon.eot?pycq84');
-        src:  url('../fonts/icomoon.eot?pycq84#iefix') format('embedded-opentype'),
-        url('../fonts/icomoon.ttf?pycq84') format('truetype'),
-        url('../fonts/icomoon.woff?pycq84') format('woff'),
-        url('../fonts/icomoon.svg?pycq84#icomoon') format('svg');
+        font-family: 'futura';
+        src:  url('../fonts/Futura-book?pycq84');
+        src:  url('../fonts/Futura-book?pycq84#iefix') format('embedded-opentype'),
+        url('../fonts/Futura-book.ttf?pycq84') format('truetype');
         font-weight: normal;
         font-style: normal;
 }
 
 
 [class^="icon-"], [class*=" icon-"] {
-        font-family: 'icomoon' !important;
+        font-family: 'futura' !important;
         speak: none;
         font-style: normal;
         font-weight: normal;
@@ -30,61 +28,61 @@
 
 
 .icon-animal:before {
-        content: "\e907";
+        content: "animal";
 }
 .icon-child:before {
-        content: "\e903";
+        content: "child";
 }
 .icon-sport:before {
-        content: "\e905";
+        content: "sport";
 }
 .icon-motor:before {
-        content: "\e902";
+        content: "motor";
 }
 .icon-food:before {
-        content: "\e901";
+        content: "food";
 }
-.icon-hollidays:before {
-        content: "\e906";
+.icon-holidays:before {
+        content: "holidays";
 }
 .icon-business:before {
-        content: "\e900";
+        content: "business";
 }
 .icon-news:before {
-        content: "\e904";
+        content: "news";
 }
 .icon-jewelry:before {
-        content: "\e919";
+        content: "jewelry";
 }
 .icon-traffic:before {
-        content: "\e91a";
+        content: "traffic";
 }
 .icon-bank:before {
-        content: "\e921";
+        content: "bank";
 }
 .icon-story:before {
-        content: "\e923";
+        content: "story";
 }
 .icon-slideshow:before {
-        content: "\e92e";
+        content: "slideshow";
 }
 .icon-market:before {
-        content: "\e93a";
+        content: "market";
 }
 .icon-hightech:before {
-        content: "\e958";
+        content: "hightech";
 }
 .icon-nature:before {
-        content: "\e9a4";
+        content: "nature";
 }
 .icon-man:before {
-        content: "\e9dc";
+        content: "man";
 }
 .icon-woman:before {
-        content: "\e9dd";
+        content: "woman";
 }
 .icon-video:before {
-        content: "\ea1c";
+        content: "video";
 }
 .icon-fr:before {
         content: "fr";
