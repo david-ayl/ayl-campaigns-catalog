@@ -10,15 +10,18 @@ html(lang="fr")
                 include parts/campaigns.pug
 
                 mixin campaigns(items)
+
                         each val, index in items
                                 li.mix(class!= val.tags.join(" ") + ' ' + val.name)
-                                        .info
-                                                h3.title!= val.name
-                                                pre.id!= val.id
-                                        .tags-wrapper
-                                                each value in val.tags
-                                                        i(class="icon-" + value)
-                                        .trigger click to see campaigns
+                                        div.mix-infos
+                                                .info
+                                                        h3.title!= val.name
+                                                        pre.id!= val.id
+                                                .tags-wrapper
+                                                        each value in val.tags
+                                                                i(class="icon-" + value)
+                                                .trigger click to see
+                                                div.overlay-infos
                         - i = 0;
                         while i < parseInt(items.length / 4)
                                 li.gap
