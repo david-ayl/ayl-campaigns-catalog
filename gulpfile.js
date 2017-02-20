@@ -25,24 +25,25 @@ gulp.task('html:watch', function() {
 });
 
 gulp.task('img', function() {
-        gulp.src('src/images/*.{jpeg,jpg,gif,ico,png}')
+        gulp.src(['src/images/*.{jpeg,jpg,gif,ico,png}', 'src/images/*/*.{jpeg,jpg,gif,ico,png}'])
         .pipe(gulp.dest('dist/images/'))
 });
 
 gulp.task('img:watch', function() {
-        gulp.watch('src/images/*.{jpeg,jpg,gif,ico,png}' ['img']);
+        gulp.watch(['src/images/*.{jpeg,jpg,gif,ico,png}', 'src/images/*/*.{jpeg,jpg,gif,ico,png}'] ['img']);
 });
 
 gulp.task('sass', function() {
-        gulp.src('src/styles/**.scss')
+        gulp.src(['src/styles/**.scss', 'src/styles/*/**.scss'])
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer())
+        .pipe(cleanCSS())
         .pipe(gulp.dest('dist/styles/'))
         .pipe(connect.reload());
 });
 
 gulp.task('sass:watch', function() {
-        gulp.watch('src/styles/**.scss', ['sass']);
+        gulp.watch(['src/styles/**.scss', 'src/styles/*/**.scss'], ['sass']);
 });
 
 gulp.task('js', function() {
