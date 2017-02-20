@@ -3,6 +3,7 @@ html(lang="fr")
         head
                 meta(charset="utf-8")
                 title Catalogue de campagnes
+                meta(name="viewport", content="width=device-width, initial-scale=1.0")
                 link(rel="stylesheet", media="all", href="styles/main.css")
                 link(rel="shortcut icon", href="img/favicon.ico", type="image/x-icon")
         body
@@ -32,6 +33,7 @@ html(lang="fr")
                         - i = 0;
                         each item in items
                                 div.cd-filter-block(class=Object.keys(items)[i])
+                                        h5.filter-title!= Object.keys(items)[i]
                                         ul.cd-filter-content.cd-filters.list
                                                 each val in item
                                                         li.input-container
@@ -40,11 +42,18 @@ html(lang="fr")
                                                 - i++
 
                 main.cd-main-content
-                        div.cd-filter-block
-                                form
-                                        div.cd-filter-content
-                                                input(type="search", placeholder="Search...")
-                        +nav(tags)
+                        div#filters
+                                div.logo-container.filter-wrapper
+                                        img.logo(src="images/logo.png", alt="logo")
+                                div.filters-container.filter-wrapper
+                                        +nav(tags)
+                                div.text-search-container.filter-wrapper
+                                        div.cd-filter-block
+                                                form
+                                                        div.cd-filter-content.text-filter-content
+                                                                input.text-filter-input(type="search", id="text-filter")
+                                                                span.border
+                                                                label.text-filter-label(for="text-filter") Search :
                         section.cd-gallery
                                 ul
                                         +campaigns(campaigns)
