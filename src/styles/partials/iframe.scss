@@ -23,4 +23,23 @@
                 width:735px;
                 height:200px;
         }
+
+        #close-iframe
+        {
+        /*background-image:url("../images/close_button.png");*/
+        background-image:url("../images/close-button_black.png");
+        background-size: 20px 20px;
+        background-repeat: no-repeat ;
+        cursor: pointer;
+        height:20px;
+        position: absolute;
+        right: 0;
+        top: -20px;
+        width: 20px;
+        }
+
+        #close-iframe:hover
+        {
+          background-image:url("../images/close-button_blanc.png");
+        }
 }
