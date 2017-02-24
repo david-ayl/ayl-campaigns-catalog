@@ -39,7 +39,7 @@ html(lang="fr")
                                                 each val in item
                                                         if j == 0
                                                                 li.input-container-all
-                                                                        input.filter(data-filter="*", type="radio" id="checkbox-all-"+Object.keys(items)[i], name!=Object.keys(items)[i])
+                                                                        input.filter(data-filter="*", type="radio" id="checkbox-all-"+Object.keys(items)[i], name!=Object.keys(items)[i], checked=true)
                                                                         label.checkbox-label(for="checkbox-all-"+Object.keys(items)[i]) all
                                                         li.input-container
                                                                 input.filter(data-filter="."+val, type="radio" id="checkbox-"+val, name!=Object.keys(items)[i])

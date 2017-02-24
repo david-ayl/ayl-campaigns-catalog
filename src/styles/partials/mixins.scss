@@ -1,4 +1,23 @@
 
+$S:     480px;
+$M:     768px;
+$L:     1170px;
+$XL:    1900px;
+
+@mixin MQ($canvas) {
+        @if $canvas == S {
+                @media only screen and (min-width: $S) { @content; }
+        }
+        @else if $canvas == M {
+                @media only screen and (min-width: $M) { @content; }
+        }
+        @else if $canvas == L {
+                @media only screen and (min-width: $L) { @content; }
+        }@else if $canvas == XL {
+                @media only screen and (min-width: $XL) { @content; }
+        }
+}
+
 @mixin clearLast() {
         clear:both;
         border-right:none !important;
@@ -26,4 +45,3 @@
                 color:#222;
         }
 }
-

@@ -2,6 +2,20 @@
 @import 'mixins.scss';
 @import 'variables.scss';
 
+
+@mixin filtersKind($color) {
+    .filter-title{
+      color:lighten($color, 10%);
+    }
+    input{
+            &:checked, &:active{
+                    & + .checkbox-label{
+                            background-color:darken($color, 24%);
+                            color:lighten($color, 20%);
+                    }
+            }
+    }
+}
 #filters{
         padding:10px 50px 20px 50px;
         background-color:darken($dark, 0%);
@@ -22,9 +36,18 @@
 .filters-container{
         width:70%;
 }
-.text-search-container{
-        width:10%;
+
+
+.languages{
+  @include filtersKind($aylgreen);
 }
+.type{
+  @include filtersKind($aylorange);
+}
+.topic{
+  @include filtersKind($deepblue);
+}
+
 .filter-title{
         font-size:1em;
         margin:8px 0 0;
@@ -32,6 +55,9 @@
         text-transform:uppercase;
         font-weight:100;
         color:darken($light, 50%);
+        width:70px;
+        text-align:right;
+
 }
 .text-filter-content{
         position:relative;
@@ -89,7 +115,8 @@
         color:lighten($dark, 70%);
 }
 .cd-filter-block{
-        display:inline-block;
+        position:relative;
+        display:flex;
         &.language{
                 margin:0 20px 0 0;
         }
@@ -101,17 +128,6 @@
 .cd-filter-content.cd-filters{
         display:inline-block;
         height:24px;
-        .input-container{
-                overflow:hidden;
-                &:first-of-type{
-                        border-top-left-radius:4px;
-                        border-bottom-left-radius:4px;
-                }
-                &:last-of-type{
-                        border-top-right-radius:4px;
-                        border-bottom-right-radius:4px;
-                }
-        }
         .checkbox-label{
                 cursor:pointer;
                 background-color:lighten($dark, 5%);
@@ -133,12 +149,6 @@
                 width:100%;
                 height:100%;
                 margin:0;
-                &:checked, &:active{
-                        & + .checkbox-label{
-                                background-color:darken($dark, 1%);
-                                color:$light;
-                        }
-                }
         }
         label{
                 text-transform:uppercase;
@@ -147,4 +157,35 @@
                 display:inline-block;
                 width:100%;
         }
+}
+.input-container-all{
+  width:50px;
+  margin:0 10px;
+}
+
+@media only screen and (max-width: 1170px) {
+  .logo-container{
+    position:absolute;
+    top:10px;
+    right:10px;
+    width:auto;
+    .logo{
+      width:50px;
+    }
+  }
+  .cd-filter-block{
+    display:block;
+  }
+  .input-container{
+    margin:2px;
+  }
+  .input-container-all{
+    display:block;
+    margin:2px 0;
+    width:70px;
+  }
+  .filter-title{
+    text-align:left;
+    padding:0;
+  }
 }
