@@ -21,7 +21,7 @@ html(lang="fr")
                                                 .info
                                                         h3.title!= val.name
                                                         pre.id!= val.id
-                                                
+
                                                 .trigger click to see
                                                 div.overlay-infos
                         - i = 0;
@@ -35,10 +35,16 @@ html(lang="fr")
                                 div.cd-filter-block(class=Object.keys(items)[i])
                                         h5.filter-title!= Object.keys(items)[i]
                                         ul.cd-filter-content.cd-filters.list
+                                                - j = 0;
                                                 each val in item
+                                                        if j == 0
+                                                                li.input-container-all
+                                                                        input.filter(data-filter="*", type="radio" id="checkbox-all-"+Object.keys(items)[i], name!=Object.keys(items)[i], checked=true)
+                                                                        label.checkbox-label(for="checkbox-all-"+Object.keys(items)[i]) all
                                                         li.input-container
-                                                                input.filter(data-filter="."+val, type="checkbox" id="checkbox-"+val)
+                                                                input.filter(data-filter="."+val, type="radio" id="checkbox-"+val, name!=Object.keys(items)[i])
                                                                 label.checkbox-label(for="checkbox-"+val)!= val
+                                                        - j++
                                                 - i++
 
                 main.cd-main-content
@@ -51,7 +57,7 @@ html(lang="fr")
                                         div.cd-filter-block
                                                 form
                                                         div.cd-filter-content.text-filter-content
-                                                                input.text-filter-input(type="search", id="text-filter")
+                                                                input.text-filter-input(type="search", id="text-filter", required)
                                                                 span.border
                                                                 label.text-filter-label(for="text-filter") Search :
                         section.cd-gallery
@@ -61,7 +67,7 @@ html(lang="fr")
 
                 div#overflay-iframe-container
                         div.iframe-container(scrolling="no", frameborder="0")
-                                #close-iframe close
+                                #close-iframe 
                                 iframe.campaign-iframe
 
                 script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js", type="text/javascript")
