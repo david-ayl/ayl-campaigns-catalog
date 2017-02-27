@@ -2,140 +2,228 @@
 @import 'mixins.scss';
 @import 'variables.scss';
 
-#filters{
-        padding:10px 50px 20px 50px;
-        background-color:darken($dark, 0%);
-        display:flex;
-        justify-content:center;
-        align-items:center;
-}
-.filter-wrapper{
-        padding:20px;
-}
-.logo-container{
-        width:10%;
-        .logo{
-                display:block;
-                width:100%;
+@mixin filtersKind($color) {
+    .filter-title {
+        color: lighten($color, 10%);
+    }
+
+    input {
+        &:active,
+        &:checked {
+            & + .checkbox-label {
+                background-color: darken($color, 24%);
+                color: lighten($color, 20%);
+            }
         }
+    }
 }
-.filters-container{
-        width:70%;
+
+#filters {
+    padding: 10px 50px 20px;
+    background-color: darken($dark, 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.text-search-container{
-        width:10%;
+
+.filter-wrapper {
+    padding: 20px;
 }
-.filter-title{
-        font-size:1em;
-        margin:8px 0 0;
-        padding:0 0 0 10px;
-        text-transform:uppercase;
-        font-weight:100;
-        color:darken($light, 50%);
+
+.logo-container {
+    max-width: 140px;
+
+    .logo {
+        display: block;
+        width: 100%;
+    }
 }
-.text-filter-content{
-        position:relative;
-        display:inline-block;
+
+.filters-container {
+    width: 70%;
 }
-.text-filter-input{
-        background-color:transparent;
-        border:none;
-        border-bottom:1px solid lighten($dark, 70%);
-        outline:none;
-        padding:2px 0px;
-        top:0;
-        width:200px;
-        &:focus{
-                & ~ .text-filter-label{
-                        top:-20px;
-                        left:0;
-                        font-size:11px;
-                        color: lime;
-                }
-                & ~ .border{
-                        &:after, &:before{
-                                width:50%;
-                        }
-                }
+
+.languages {
+    @include filtersKind($aylgreen);
+}
+
+.type {
+    @include filtersKind($aylorange);
+}
+
+.topic {
+    @include filtersKind($deepblue);
+}
+
+.filter-title {
+    font-size: 1em;
+    margin: 8px 0 0;
+    padding: 0 0 0 10px;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: darken($light, 50%);
+    width: 70px;
+    text-align: right;
+}
+
+.text-filter-content {
+    position: relative;
+    display: inline-block;
+}
+
+.text-filter-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid lighten($dark, 70%);
+    outline: none;
+    padding: 0 0 5px;
+    top: 0;
+    width: 200px;
+    color: lighten($aylorange, 30%);
+    font-size: 15px;
+
+    &:focus,
+    &:valid {
+        & ~ .text-filter-label {
+            top: -20px;
+            left: 0;
+            font-size: 11px;
+            color: $aylorange;
         }
+
+        & ~ .border {
+            &:after,
+            &:before {
+                width: 50%;
+            }
+        }
+    }
 }
-.border{
-        &:after, &:before{
-                transition-duration:0.3s;
-                content:' ';
-                display:block;
-                position:absolute;
-                bottom:0;
-                width:0%;
-                height:2px;
-                background-color:lime;
-        }
-        &:after{
-                left:50%;
-        }
-        &:before{
-                right:50%;
-        }
+
+.border {
+    &:after,
+    &:before {
+        transition-duration: 0.3s;
+        content: ' ';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: $aylorange;
+    }
+
+    &:after {
+        left: 50%;
+    }
+
+    &:before {
+        right: 50%;
+    }
 }
-.text-filter-label{
-        position:absolute;
-        top:0;
-        left:0;
-        pointer-events:none;
-        transition-duration:0.3s;
-        font-size:13px;
-        color:lighten($dark, 70%);
+
+.text-filter-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition-duration: 0.3s;
+    font-size: 13px;
+    color: lighten($dark, 70%);
 }
-.cd-filters{
-        margin:3px 0 10px 0;;
-        padding:0;
+
+.cd-filter-block {
+    position: relative;
+    display: flex;
+
+    &.language {
+        margin: 0 20px 0 0;
+    }
 }
-.cd-filter-content.cd-filters{
-        display:inline-block;
-        height:24px;
-        .input-container{
-                height:24px;
-                overflow:hidden;
-                &:first-of-type{
-                        border-top-left-radius:4px;
-                        border-bottom-left-radius:4px;
-                }
-                &:last-of-type{
-                        border-top-right-radius:4px;
-                        border-bottom-right-radius:4px;
-                }
-        }
-        .checkbox-label{
-                cursor:pointer;
-                background-color:lighten($dark, 5%);
-                line-height:24px;
-                color:darken($light, 0%);
-                font-size:10px;
-        }
+
+.cd-filters {
+    margin: 3px 0 10px;
+    padding: 0;
 }
-.input-container{
-        display:inline-block;
-        width:70px;
-        position:relative;
-        height:20px;
-        input{
-                position:absolute;
-                visibility:hidden;
-                width:100%;
-                height:100%;
-                margin:0;
-                &:checked{
-                        & + .checkbox-label{
-                                background-color:darken($dark, 1%);
-                                color:$light;
-                        }
-                }
+
+.cd-filter-content.cd-filters {
+    display: inline-block;
+    height: 24px;
+
+    .checkbox-label {
+        cursor: pointer;
+        background-color: lighten($dark, 5%);
+        line-height: 24px;
+        color: darken($light, 0%);
+        font-size: 10px;
+    }
+}
+
+.input-container,
+.input-container-all {
+    overflow: hidden;
+    height: 24px;
+    display: inline-block;
+    width: 70px;
+    position: relative;
+    height: 20px;
+
+    input {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    label {
+        text-transform: uppercase;
+        text-align: center;
+        color: $dark;
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+.input-container-all {
+    width: 50px;
+    margin: 0 10px;
+}
+@media only screen and (max-width: 997px) {
+    #filters {
+        display: block;
+    }
+
+    .filters-container{
+      width:100%;
+    }
+    .logo-container {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: auto;
+
+        .logo {
+            width: 50px;
         }
-        label{
-                text-transform:uppercase;
-                text-align:center;
-                color:$dark;
-                display:inline-block;
-                width:100%;
-        }
+    }
+
+    .cd-filter-block {
+        display: block;
+    }
+
+    .input-container {
+        margin: 2px;
+    }
+
+    .input-container-all {
+        display: block;
+        margin: 2px 0;
+        width: 70px;
+    }
+
+    .filter-title {
+        text-align: left;
+        padding: 0;
+    }
 }
