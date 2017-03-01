@@ -6,37 +6,37 @@
 
 li{
 	&.motor .mix-infos{
-		background-image:url("../../images/tiles-background/motor.jpg");
+		background-image:url("../images/tiles-background/motor.jpg");
 	}
 	&.woman .mix-infos{
-		background-image:url("../../images/tiles-background/woman.jpg");
+		background-image:url("../images/tiles-background/woman.jpg");
 	}
 	&.man .mix-infos{
-		background-image:url("../../images/tiles-background/man.jpg");
+		background-image:url("../images/tiles-background/man.jpg");
 	}
 	&.hightech .mix-infos{
-		background-image:url("../../images/tiles-background/hightech.jpg");
+		background-image:url("../images/tiles-background/hightech.jpg");
 	}
 	&.bank .mix-infos{
-		background-image:url("../../images/tiles-background/bank.jpg");
+		background-image:url("../images/tiles-background/bank.jpg");
 	}
 	&.business .mix-infos{
-		background-image:url("../../images/tiles-background/business.jpg");
+		background-image:url("../images/tiles-background/business.jpg");
 	}
 	&.animal .mix-infos{
-		background-image:url("../../images/tiles-background/dog.jpg");
+		background-image:url("../images/tiles-background/dog.jpg");
 	}
 	&.child .mix-infos{
-		background-image:url("../../images/tiles-background/child.jpg");
+		background-image:url("../images/tiles-background/child.jpg");
 	}
 	&.sport .mix-infos{
-		background-image:url("../../images/tiles-background/sport.jpg");
+		background-image:url("../images/tiles-background/sport.jpg");
 	}
 	&.food .mix-infos{
-		background-image:url("../../images/tiles-background/food.jpg");
+		background-image:url("../images/tiles-background/food.jpg");
 	}
 	&.holidays .mix-infos{
-		background-image:url("../../images/tiles-background/holidays.jpg");
+		background-image:url("../images/tiles-background/holidays.jpg");
 	}
 	&.news .mix-infos{
 		background-image:url("../../images/tiles-background/news.jpg");
@@ -160,7 +160,7 @@ li{
 	.info{
 		position:relative;
 		z-index:10;
-		
+
 	}
 }
 
@@ -173,4 +173,3 @@ li{
 	left:0;
 	z-index:2;
 }
-
