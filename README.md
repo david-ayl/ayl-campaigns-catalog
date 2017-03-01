@@ -12,7 +12,7 @@ To install all dev dependencies
 
 
 ```
-npm run dev
+npm run start
 ```
 To start watch tasks and to open localhost
 
