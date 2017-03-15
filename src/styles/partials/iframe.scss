@@ -21,12 +21,12 @@
         .campaign-iframe{
                 border:none;
                 width:735px;
-                height:200px;
+                height:210px;
+                overflow: hidden;
         }
 
         #close-iframe
         {
-        /*background-image:url("../images/close_button.png");*/
         background-image:url("../images/close-button_black.png");
         background-size: 20px 20px;
         background-repeat: no-repeat ;
