@@ -1,24 +1,26 @@
 {
-        "name": "resp",
-        "version": "1.0.0",
-        "description": "responsive bloc",
-        "main": "index.js",
-        "scripts": {
-                "start": "gulp dev",
-                "build": "gulp build",
-                "test": "echo \"Error: no test specified\" && exit 1",
-                "deploy": "gh-pages -d dist"
-        },
-        "author": "david tessier",
-        "license": "ISC",
-        "devDependencies": {
-                "gh-pages": "^0.12.0",
-                "gulp": "^3.9.1",
-                "gulp-autoprefixer": "^3.1.1",
-                "gulp-clean-css": "^2.3.2",
-                "gulp-connect": "^5.0.0",
-                "gulp-pug": "^3.2.0",
-                "gulp-sass": "^3.1.0",
-                "gulp-watch": "^4.3.11"
-        }
+  "name": "resp",
+  "version": "1.0.0",
+  "description": "responsive bloc",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp dev",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "david tessier",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^0.12.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-connect": "^5.0.0",
+    "gulp-pug": "^3.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.0",
+    "gulp-watch": "^4.3.11",
+    "pump": "^1.0.2"
+  }
 }

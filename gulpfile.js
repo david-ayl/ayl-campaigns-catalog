@@ -5,6 +5,8 @@ var watch = require('gulp-watch');
 var cleanCSS = require('gulp-clean-css');
 var autoprefixer = require('gulp-autoprefixer');
 var pug = require('gulp-pug');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
 
 gulp.task('connect', function() {
         connect.server({
@@ -46,18 +48,21 @@ gulp.task('sass:watch', function() {
         gulp.watch(['src/styles/**.scss', 'src/styles/*/**.scss'], ['sass']);
 });
 
-gulp.task('js', function() {
-        gulp.src('src/scripts/**.js')
-        .pipe(gulp.dest('dist/scripts/'))
-});
+gulp.task('js:min', function() {
+  pump([
+    gulp.src('src/scripts/**.js'),
+    uglify(),
+    gulp.dest('dist/scripts/')
+  ])
+})
 
 gulp.task('js:watch', function() {
-        gulp.watch('src/scripts/**.js', ['js']);
+        gulp.watch('src/scripts/**.js', ['js:min']);
 });
 gulp.task('font', function() {
         gulp.src('src/fonts/**.*')
         .pipe(gulp.dest('dist/fonts/'))
 });
-gulp.task('build', ['sass', 'img', 'js', 'html', 'font']);
+gulp.task('build', ['sass', 'img', 'js:min', 'html', 'font']);
 
 gulp.task('dev', ['html:watch', 'sass:watch', 'img:watch', 'js:watch', 'connect']);
