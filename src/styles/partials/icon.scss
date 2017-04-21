@@ -1,116 +1,118 @@
 @font-face {
-        font-family: 'futura';
-        src:  url('../fonts/Futura-book?pycq84');
-        src:  url('../fonts/Futura-book?pycq84#iefix') format('embedded-opentype'),
-        url('../fonts/Futura-book.ttf?pycq84') format('truetype');
-        font-weight: normal;
-        font-style: normal;
+  font-family: 'futura';
+  src:  url('../fonts/Futura-book?pycq84');
+  src:  url('../fonts/Futura-book?pycq84#iefix') format('embedded-opentype'),
+  url('../fonts/Futura-book.ttf?pycq84') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
 [class^="icon-"], [class*=" icon-"] {
-        font-family: 'futura' !important;
-        speak: none;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        font-size:20px;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        padding:5px;
-        margin:2px;
-        background-color:#ffffff;
-        display:inline-block;
-        text-transform:uppercase;
+  font-family: 'futura' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size:20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding:5px;
+  margin:2px;
+  background-color:#ffffff;
+  display:inline-block;
+  text-transform:uppercase;
 }
 
-
+.icon-health:before{
+  content: "health";
+}
 .icon-animal:before {
-        content: "animal";
+  content: "animal";
 }
 .icon-child:before {
-        content: "child";
+  content: "child";
 }
 .icon-sport:before {
-        content: "sport";
+  content: "sport";
 }
 .icon-motor:before {
-        content: "motor";
+  content: "motor";
 }
 .icon-food:before {
-        content: "food";
+  content: "food";
 }
 .icon-holidays:before {
-        content: "holidays";
+  content: "holidays";
 }
 .icon-business:before {
-        content: "business";
+  content: "business";
 }
 .icon-news:before {
-        content: "news";
+  content: "news";
 }
 .icon-jewelry:before {
-        content: "jewelry";
+  content: "jewelry";
 }
 .icon-traffic:before {
-        content: "traffic";
+  content: "traffic";
 }
 .icon-bank:before {
-        content: "bank";
+  content: "bank";
 }
 .icon-story:before {
-        content: "story";
+  content: "story";
 }
 .icon-slideshow:before {
-        content: "slideshow";
+  content: "slideshow";
 }
 .icon-market:before {
-        content: "market";
+  content: "market";
 }
 .icon-hightech:before {
-        content: "hightech";
+  content: "hightech";
 }
 .icon-nature:before {
-        content: "nature";
+  content: "nature";
 }
 .icon-man:before {
-        content: "man";
+  content: "man";
 }
 .icon-woman:before {
-        content: "woman";
+  content: "woman";
 }
 .icon-video:before {
-        content: "video";
+  content: "video";
 }
 .icon-fr:before {
-        content: "fr";
-        font-family:'futura', sans-serif;
-        font-size:10px;
-        vertical-align:middle;
+  content: "fr";
+  font-family:'futura', sans-serif;
+  font-size:10px;
+  vertical-align:middle;
 }
 .icon-en:before {
-        content: "en";
-        font-family:'futura', sans-serif;
-        font-size:10px;
-        vertical-align:middle;
+  content: "en";
+  font-family:'futura', sans-serif;
+  font-size:10px;
+  vertical-align:middle;
 }
 .icon-it:before {
-        content: "it";
-        font-family:'futura', sans-serif;
-        font-size:10px;
-        vertical-align:middle;
+  content: "it";
+  font-family:'futura', sans-serif;
+  font-size:10px;
+  vertical-align:middle;
 }
 .icon-es:before {
-        content: "es";
-        font-family:'futura', sans-serif;
-        font-size:10px;
-        vertical-align:middle;
+  content: "es";
+  font-family:'futura', sans-serif;
+  font-size:10px;
+  vertical-align:middle;
 }
 .icon-de:before {
-        content: "de";
-        font-family:'futura', sans-serif;
-        font-size:10px;
-        vertical-align:middle;
+  content: "de";
+  font-family:'futura', sans-serif;
+  font-size:10px;
+  vertical-align:middle;
 }
