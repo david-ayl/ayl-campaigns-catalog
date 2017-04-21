@@ -5,6 +5,9 @@
 
 
 li{
+	&.health .mix-infos{
+		background-image: url("../images/tiles-background/health.jpg");
+	}
 	&.motor .mix-infos{
 		background-image:url("../images/tiles-background/motor.jpg");
 	}
