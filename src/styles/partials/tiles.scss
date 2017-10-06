@@ -53,6 +53,9 @@ li{
 	&.traffic .trigger{
 		background:$aylorange;
 	}
+	&.playlist .trigger{
+		background: $deepblue;
+	}
 	&.video .trigger{
 		background:$deepblue;
 	}
