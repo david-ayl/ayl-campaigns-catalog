@@ -51,7 +51,7 @@ gulp.task('sass:watch', function() {
 gulp.task('js:min', function() {
   pump([
     gulp.src('src/scripts/**.js'),
-    uglify(),
+    //uglify(),
     gulp.dest('dist/scripts/')
   ])
 })

@@ -22,7 +22,12 @@ $(document).ready(function() {
 
         $(document)
         .on('click', '.trigger', displayCamp)
-        .on('click', '#close-iframe', removeCamp);
+        .on('click', '#close-iframe', removeCamp)
+        .keyup(function(e) {
+          if(e.which == 27) {
+            removeCamp();
+          }
+        });
 
 });
 
