@@ -59,6 +59,9 @@
 .icon-traffic:before {
   content: "traffic";
 }
+.icon-display:before {
+  content: "display";
+}
 .icon-playlist:before {
   content: "playlist";
 }
@@ -88,6 +91,12 @@
 }
 .icon-video:before {
   content: "video";
+}
+.icon-apac:before {
+  content: "ap";
+  font-family:'futura', sans-serif;
+  font-size:10px;
+  vertical-align:middle;
 }
 .icon-fr:before {
   content: "fr";
