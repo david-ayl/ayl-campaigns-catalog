@@ -50,7 +50,7 @@ gulp.task('serve', function() {
 });
 
 gulp.task('export', function() {
-  gulp.src(['campaigns.pug'])
+  gulp.src('src/parts/campaigns.pug')
     .pipe(replace(/^-|\/\/\-.*/gm, ''))
     .pipe(rename('parts/campaigns.js'))
     .pipe(gulp.dest('dist/'));
@@ -62,7 +62,7 @@ gulp.task('watch', function() {
     'src/scripts/**/*.js',
     'src/*.pug',
     'src/images/**/*',
-    'parts/**/*',
+    'src/parts/**/*',
     'src/fonts/**/*'
   ], ['build']);
 });
