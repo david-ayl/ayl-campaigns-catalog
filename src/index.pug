@@ -5,6 +5,7 @@ html(lang="fr")
                 script(async="true", src="https://www.googletagmanager.com/gtag/js?id=UA-37971324-1")
                 script.
                   window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-37971324-1');
+                script(src="scripts/campaigns.js", type="text/javascript")
                 meta(charset="utf-8")
                 title Catalogue de campagnes
                 meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -13,7 +14,8 @@ html(lang="fr")
         body
 
                 include parts/campaigns.pug
-
+                script(src='parts/campaigns.js', type='text/javascript')
+              
                 mixin campaigns(items)
 
                         each val, index in items
