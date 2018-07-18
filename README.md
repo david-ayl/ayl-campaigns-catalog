@@ -21,3 +21,9 @@ To start watch tasks and to open localhost
 npm run build
 ```
 To run production build
+
+
+```
+./deploy.sh
+```
+To deploy on s3 (require aws s3 CLI)

@@ -2,6 +2,23 @@
 
 $(document).ready(function() {
 
+
+  var removeModal = function() {
+    $("#modal").remove();
+    $("body").css("overflow", "visible");
+  }
+
+  var modal = $("<div id='modal' style='position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.8);z-index:998;'><div style='z-index:999;font-size:24px;position:absolute;top:50%;left:50%;transform:translateX(-50%) translateY(-50%);padding:20px 40px;background-color:#FFFFFF;text-align:center;'>This page will be permanently moved <div>the 1<sup>st</sup> of September 2018</div>You can right now save the new url :<div><a href='http://public.adyoulike.com/catalog' target='_blank'>http://public.adyoulike.com/catalog/</a></div><div style='display:block;width:100%;background-color:#000000;color:#ffffff;text-transform:uppercase;padding:25px 0;font-size:25px;text-align:center;margin:50px 0 10px 0;cursor:pointer;'>Ok</div></div></div>");
+
+  if(window.location.href !== "http://public.adyoulike.com/catalog/index.html") {
+    $("body").append(modal).css("overflow", "hidden");
+  }
+
+
+  $(document).on("click", "#modal", function() {
+    removeModal();
+  });
+
         var displayCamp = function(e) {
                 var el = e.target
                 var id = $(el).closest('li').find('.id').html();
