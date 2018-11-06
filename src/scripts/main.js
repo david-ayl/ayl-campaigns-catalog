@@ -17,19 +17,21 @@ function populate_filters(camp, filtersFamilyArray){
 
 }
 
-$(document).ready(function() {
 
-  $.get("https://david-ayl.github.io/campaigns-list/public_campaigns.json", function(campaigns) {
 
-    populate_filters(campaigns, ["geo", "type", "iab"]);
+$.get("https://david-ayl.github.io/campaigns-list/public_campaigns.json", function(campaigns) {
 
-    campaigns.forEach(function(campaign) {
-      var campaign_tags = " " + campaign.geo + " " + campaign.type + " " + campaign.iab + " " + campaign.name;
-      var campaign_node = $("<li class='mix" + campaign_tags + "'><div class='mix-infos'><div class='tags-wrapper'><i class='icon-" + campaign.geo + "'></i><i class='icon-" + campaign.type + "'></i><i class='icon-" + campaign.iab + "'></i></div><div class='info'><h3 class='title'>" + campaign.name + "</h3><pre class='id'>" + campaign.ids.campaign + "</pre></div><div class='trigger'>click to see</div><div class='overlays-infos'></div></div></li>");
-      $("#campaigns").append(campaign_node);
-    });
+  populate_filters(campaigns, ["geo", "type", "iab"]);
 
+  campaigns.forEach(function(campaign) {
+    var campaign_tags = " " + campaign.geo + " " + campaign.type + " " + campaign.iab + " " + campaign.name;
+    var campaign_node = $("<li class='mix" + campaign_tags + "'><div class='mix-infos'><div class='tags-wrapper'><i class='icon-" + campaign.geo + "'></i><i class='icon-" + campaign.type + "'></i><i class='icon-" + campaign.iab + "'></i></div><div class='info'><h3 class='title'>" + campaign.name + "</h3><pre data-camptrack='" + campaign.ids.track + "' data-campcrea='" + campaign.ids.creative + "' class='id'>" + campaign.ids.campaign + "</pre></div><div class='trigger'>click to see</div><div class='overlays-infos'></div></div></li>");
+    $("#campaigns").append(campaign_node);
   });
+
+});
+
+$(document).ready(function() {
 
   $(document).on("click", "#modal", function() {
     removeModal();
@@ -37,11 +39,15 @@ $(document).ready(function() {
 
   var displayCamp = function(e) {
     var el = e.target
-    var id = $(el).closest('li').find('.id').html();
+    var campId = $(el).closest('li').find('.id').html();
+    var campTrack = $(el).closest('li').find('.id').attr("data-camptrack");
+    var campCrea = $(el).closest('li').find('.id').attr("data-campcrea");
     $('#overflay-iframe-container').addClass('visible');
     $('.campaign-iframe').attr({
       'src' : 'iframe.html',
-      'data-camp' : id
+      'data-camp' : campId,
+      'data-track' : campTrack,
+      'data-crea' : campCrea
     });
   };
 
@@ -49,7 +55,9 @@ $(document).ready(function() {
     $('#overflay-iframe-container').removeClass('visible');
     $('.campaign-iframe').attr({
       'src' : '',
-      'data-camp' : ''
+      'data-camp' : '',
+      'data-track' : '',
+      'data-crea' : ''
     });
   }
 
@@ -186,9 +194,6 @@ function initMix() {
 	});
 
 }
-
-
-//}); REMOVE_READY
 
 /*****************************************************
 	MixItUp - Define a single object literal
