@@ -1,56 +1,74 @@
 
 
+$(document).ajaxComplete(function() {
+  initMix();
+});
+
+function populate_filters(camp, filtersFamilyArray){
+
+  filtersFamilyArray.forEach(function(filterFamily) {
+    uniqFilterFamily = _.uniq(_.map(camp, filterFamily));
+
+    uniqFilterFamily.forEach(function(filter) {
+      $(".cd-filter-block." + filterFamily + " ul").append($("<li class='input-container'><input class='filter' data-filter='." + filter + "' type='radio' id='checkbox-" + filter + "' name='" + filterFamily + "'><label class='checkbox-label' for='checkbox-" + filter + "'>" + filter + "</label></li>"))
+    });
+
+  });
+
+}
+
 $(document).ready(function() {
 
+  $.get("https://david-ayl.github.io/campaigns-list/public_campaigns.json", function(campaigns) {
 
-  var removeModal = function() {
-    $("#modal").remove();
-    $("body").css("overflow", "visible");
-  }
+    populate_filters(campaigns, ["geo", "type", "iab"]);
 
-  var modal = $("<div id='modal' style='position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.8);z-index:998;'><div style='z-index:999;font-size:24px;position:absolute;top:50%;left:50%;transform:translateX(-50%) translateY(-50%);padding:20px 40px;background-color:#FFFFFF;text-align:center;'>This page will be permanently moved <div>the 7<sup>th</sup> of September 2018</div>You can right now save the new url :<div><a href='http://public.adyoulike.com/catalog' target='_blank'>http://public.adyoulike.com/catalog/</a></div><div style='display:block;width:100%;background-color:#000000;color:#ffffff;text-transform:uppercase;padding:25px 0;font-size:25px;text-align:center;margin:50px 0 10px 0;cursor:pointer;'>Ok</div></div></div>");
+    campaigns.forEach(function(campaign) {
+      var campaign_tags = " " + campaign.geo + " " + campaign.type + " " + campaign.iab + " " + campaign.name;
+      var campaign_node = $("<li class='mix" + campaign_tags + "'><div class='mix-infos'><div class='tags-wrapper'><i class='icon-" + campaign.geo + "'></i><i class='icon-" + campaign.type + "'></i><i class='icon-" + campaign.iab + "'></i></div><div class='info'><h3 class='title'>" + campaign.name + "</h3><pre class='id'>" + campaign.ids.campaign + "</pre></div><div class='trigger'>click to see</div><div class='overlays-infos'></div></div></li>");
+      $("#campaigns").append(campaign_node);
+    });
 
-  if(window.location.href.indexOf("public.adyoulike.com") == -1) {
-    $("body").append(modal).css("overflow", "hidden");
-  }
-
+  });
 
   $(document).on("click", "#modal", function() {
     removeModal();
   });
 
-        var displayCamp = function(e) {
-                var el = e.target
-                var id = $(el).closest('li').find('.id').html();
-                $('#overflay-iframe-container').addClass('visible');
-                $('.campaign-iframe').attr({
-                        'src' : 'iframe.html',
-                        'data-camp' : id
-                });
-        };
+  var displayCamp = function(e) {
+    var el = e.target
+    var id = $(el).closest('li').find('.id').html();
+    $('#overflay-iframe-container').addClass('visible');
+    $('.campaign-iframe').attr({
+      'src' : 'iframe.html',
+      'data-camp' : id
+    });
+  };
 
-        var removeCamp = function() {
-                $('#overflay-iframe-container').removeClass('visible');
-                $('.campaign-iframe').attr({
-                        'src' : '',
-                        'data-camp' : ''
-                });
-        }
+  var removeCamp = function() {
+    $('#overflay-iframe-container').removeClass('visible');
+    $('.campaign-iframe').attr({
+      'src' : '',
+      'data-camp' : ''
+    });
+  }
 
-        $(document)
-        .on('click', '.trigger', displayCamp)
-        .on('click', '#close-iframe', removeCamp)
-        .keyup(function(e) {
-          if(e.which == 27) {
-            removeCamp();
-          }
-        });
+  $(document)
+  .on('click', '.trigger', displayCamp)
+  .on('click', '#close-iframe', removeCamp)
+  .keyup(function(e) {
+    if(e.which == 27) {
+      removeCamp();
+    }
+  });
 
 });
 
 
 /*MIXITUP LIB*/
-jQuery(document).ready(function($){
+//jQuery(document).ready(function($){ REMOVE_READY
+
+function initMix() {
 
 	function triggerFilter($bool) {
 		var elementsToTrigger = $([$('.cd-filter-trigger'), $('.cd-filter'), $('.cd-tab-filter'), $('.cd-gallery')]);
@@ -166,7 +184,11 @@ jQuery(document).ready(function($){
 	    	}
 	  	}, 200 );
 	});
-});
+
+}
+
+
+//}); REMOVE_READY
 
 /*****************************************************
 	MixItUp - Define a single object literal

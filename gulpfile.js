@@ -49,12 +49,6 @@ gulp.task('serve', function() {
     }));
 });
 
-gulp.task('export', function() {
-  gulp.src('src/parts/campaigns.pug')
-    .pipe(replace(/^-|\/\/\-.*/gm, ''))
-    .pipe(rename('parts/campaigns.js'))
-    .pipe(gulp.dest('dist/'));
-})
 
 gulp.task('watch', function() {
   gulp.watch([
@@ -67,6 +61,6 @@ gulp.task('watch', function() {
   ], ['build']);
 });
 
-gulp.task('build', ['html', 'sass', 'js', 'images', 'part', 'export']);
+gulp.task('build', ['html', 'sass', 'js', 'images', 'part', 'fonts']);
 
 gulp.task('dev', ['serve', 'watch']);

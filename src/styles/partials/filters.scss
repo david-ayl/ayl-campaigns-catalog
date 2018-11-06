@@ -44,16 +44,16 @@
     width: 70%;
 }
 
-.languages {
-    @include filtersKind($aylgreen);
+.geo {
+  @include filtersKind($aylgreen);
 }
 
 .type {
-    @include filtersKind($aylorange);
+  @include filtersKind($aylorange);
 }
 
-.topic {
-    @include filtersKind($deepblue);
+.iab {
+  @include filtersKind($deepblue);
 }
 
 .filter-title {

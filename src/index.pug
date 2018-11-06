@@ -1,81 +1,51 @@
 doctype html
 html(lang="fr")
-        head
+  head
 
-                script(async="true", src="https://www.googletagmanager.com/gtag/js?id=UA-37971324-1")
-                script.
-                  window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-37971324-1');
-                script(src="scripts/campaigns.js", type="text/javascript")
-                meta(charset="utf-8")
-                title Catalogue de campagnes
-                meta(name="viewport", content="width=device-width, initial-scale=1.0")
-                link(rel="stylesheet", media="all", href="styles/main.css")
-                link(rel="shortcut icon", href="images/favicon.ico", type="image/x-icon")
-        body
+    script(async="true", src="https://www.googletagmanager.com/gtag/js?id=UA-37971324-1")
+    script.
+      window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-37971324-1');
+    meta(charset="utf-8")
+    title Catalogue de campagnes
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", media="all", href="styles/main.css")
+    link(rel="shortcut icon", href="images/favicon.ico", type="image/x-icon")
+    body
 
-                include parts/campaigns.pug
-                script(src='parts/campaigns.js', type='text/javascript')
-              
-                mixin campaigns(items)
+      mixin filters(items)
+        each item in items
+          div(class="cd-filter-block " + item)
+            h5.filter-title item
+            ul.cd-filter-content.cd-filters.list
+              li.input-container
+                input.filter(data-filter="*", type="radio", id="checkbox-all-" + item, name= item, checked)
+                label.checkbox-label(for="checkbox-all-" + item) all
 
-                        each val, index in items
-                                li.mix(class!= val.tags.join(" ") + ' ' + val.name)
-                                        div.mix-infos
-                                                .tags-wrapper
-                                                        each value in val.tags
-                                                                i(class="icon-" + value)
-                                                .info
-                                                        h3.title!= val.name
-                                                        pre.id!= val.id
+      main.cd-main-content
+        div#filters
+          div.logo-container.filter-wrapper
+            img.logo(src="images/logo.png", alt="logo")
+          div.filters-container.filter-wrapper
+            
+            +filters(["geo", "type", "iab"])
 
-                                                .trigger click to see
-                                                div.overlay-infos
-                        - i = 0;
-                        while i < parseInt(items.length / 4)
-                                li.gap
-                                - i++
+          div.text-search-container.filter-wrapper
+            div.cd-filter-block
+              form
+                div.cd-filter-content.text-filter-content
+                  input.text-filter-input(type="search", id="text-filter", required)
+                  span.border
+                  label.text-filter-label(for="text-filter") Search :
+        section.cd-gallery
+          ul#campaigns
+          div.cd-fail-message no results
 
-                mixin nav(items)
-                        - i = 0;
-                        each item in items
-                                div.cd-filter-block(class=Object.keys(items)[i])
-                                        h5.filter-title!= Object.keys(items)[i]
-                                        ul.cd-filter-content.cd-filters.list
-                                                - j = 0;
-                                                each val in item
-                                                        if j == 0
-                                                                li.input-container
-                                                                        input.filter(data-filter="*", type="radio" id="checkbox-all-"+Object.keys(items)[i], name!=Object.keys(items)[i], checked=true)
-                                                                        label.checkbox-label(for="checkbox-all-"+Object.keys(items)[i]) all
-                                                        li.input-container
-                                                                input.filter(data-filter="."+val, type="radio" id="checkbox-"+val, name!=Object.keys(items)[i])
-                                                                label.checkbox-label(for="checkbox-"+val)!= val
-                                                        - j++
-                                                - i++
+      div#overflay-iframe-container
+        div.iframe-container(scrolling="no", frameborder="0")
+          #close-iframe Close demo
+          iframe.campaign-iframe
 
-                main.cd-main-content
-                        div#filters
-                                div.logo-container.filter-wrapper
-                                        img.logo(src="images/logo.png", alt="logo")
-                                div.filters-container.filter-wrapper
-                                        +nav(tags)
-                                div.text-search-container.filter-wrapper
-                                        div.cd-filter-block
-                                                form
-                                                        div.cd-filter-content.text-filter-content
-                                                                input.text-filter-input(type="search", id="text-filter", required)
-                                                                span.border
-                                                                label.text-filter-label(for="text-filter") Search :
-                        section.cd-gallery
-                                ul
-                                        +campaigns(campaigns)
-                                div.cd-fail-message no results
-
-                div#overflay-iframe-container
-                        div.iframe-container(scrolling="no", frameborder="0")
-                                #close-iframe Close demo
-                                iframe.campaign-iframe
-
-                script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js", type="text/javascript")
-                script(src="scripts/jquery.mixitup.min.js", type="text/javascript")
-                script(src="scripts/main.js", type="text/javascript")
+      script(src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js", type="text/javascript")
+      script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js", type="text/javascript")
+      script(src="scripts/jquery.mixitup.min.js", type="text/javascript")
+      script(src="scripts/main.js", type="text/javascript")
