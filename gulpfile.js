@@ -1,66 +1,27 @@
-var gulp = require('gulp');
-var pug = require('gulp-pug');
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var webserver = require('gulp-webserver');
-var watch = require('gulp-watch');
-var rename = require('gulp-rename');
-var replace = require('gulp-replace');
+const { parallel } = require('gulp')
+const pug = require('gulp-pug')
+const sass = require('gulp-sass')
+const concat = require('gulp-concat')
+const webserver = require('gulp-connect')
+const watch = require('gulp-watch')
+const rename = require('gulp-rename')
+const replace = require('gulp-replace')
 
-gulp.task('html', function() {
-  return gulp.src('src/*.pug')
-    .pipe(pug({}))
-    .pipe(gulp.dest('dist/'))
-});
+function javascript(cb) {
+  // body omitted
+  cb();
+}
 
-gulp.task('sass', function() {
-  return gulp.src('src/styles/**/*.scss')
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(concat('main.css'))
-    .pipe(gulp.dest('dist/styles/'))
-});
+function css(cb) {
+  // body omitted
+  cb();
+}
 
-gulp.task('js', function() {
-  return gulp.src('src/scripts/**/*.js')
-    .pipe(gulp.dest('dist/scripts/'))
-});
+function clean(cb) {
+  console.log('it clean')
+  cb()
+}
 
-gulp.task('images', function() {
-  return gulp.src('src/images/**/*')
-    .pipe(gulp.dest('dist/images/'))
-});
+exports.default = clean
 
-gulp.task('fonts', function() {
-  return gulp.src('src/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts/'))
-});
-
-gulp.task('part', function() {
-  return gulp.src('src/parts/**/*.js')
-    .pipe(gulp.dest('dist/parts/'))
-});
-
-gulp.task('serve', function() {
-  gulp.src('dist')
-    .pipe(webserver({
-      livereload: true,
-      direcotyListing: true,
-      open: true
-    }));
-});
-
-
-gulp.task('watch', function() {
-  gulp.watch([
-    'src/styles/**/*.scss',
-    'src/scripts/**/*.js',
-    'src/*.pug',
-    'src/images/**/*',
-    'src/parts/**/*',
-    'src/fonts/**/*'
-  ], ['build']);
-});
-
-gulp.task('build', ['html', 'sass', 'js', 'images', 'part', 'fonts']);
-
-gulp.task('dev', ['serve', 'watch']);
+exports.build = parallel(javascript, css)
