@@ -90,8 +90,9 @@ function rl() {
   server.reload()
 }
 
-const build = series(clean, html, css, js, images, fonts, part)
+const bld = series(clean, html, css, js, images, fonts, part)
 
-const dev = series(build, serve, w)
+const dev = series(bld, serve, w)
 
 exports.start = dev
+exports.build = bld
