@@ -1,16 +1,5 @@
 [
   {
-    "name":"Samsung",
-    "geo":"apac",
-    "type":"video",
-    "iab":"hightech",
-    "ids":{
-      "campaign":"232795a7fefa7eed4cd50db2727d9ff3",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
     "name":"Listerine",
     "geo":"apac",
     "type":"video",
@@ -484,17 +473,6 @@
     }
   },
   {
-    "name":"Adidas",
-    "geo":"de",
-    "type":"video",
-    "iab":"sport",
-    "ids":{
-      "campaign":"8aa3ed29b7fc8bccc8d9e91f5a59a54c",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
     "name":"Lufthansa",
     "geo":"de",
     "type":"display",
@@ -682,17 +660,6 @@
     }
   },
   {
-    "name":"Panzani",
-    "geo":"fr",
-    "type":"video",
-    "iab":"food",
-    "ids":{
-      "campaign":"655108a49ba4170c40cc2234e19403d6",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
     "name":"Cartier",
     "geo":"fr",
     "type":"display",
@@ -820,17 +787,6 @@
     "iab":"holidays",
     "ids":{
       "campaign":"0f17014412da0f1f8011fac3fef30427",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Perfect Cosmetic Barbados",
-    "geo":"en",
-    "type":"video",
-    "iab":"woman",
-    "ids":{
-      "campaign":"628d28787b7ad82720cd7a73c80636ff",
       "track":"",
       "creative":""
     }
