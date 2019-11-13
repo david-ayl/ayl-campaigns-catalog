@@ -27,7 +27,7 @@ function css(cb) {
 }
 
 function js(cb) {
-  return src('src/scripts/**/*.js')
+  return src('src/scripts/**/*.**')
     .pipe(dest('dist/scripts/'))
   cb()
 }

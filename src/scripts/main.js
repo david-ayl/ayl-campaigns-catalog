@@ -19,7 +19,7 @@ function populate_filters(camp, filtersFamilyArray){
 
 
 
-$.get("https://david-ayl.github.io/campaigns-list/public_campaigns.json", function(campaigns) {
+$.get("scripts/campaigns.json", function(campaigns) {
 
   populate_filters(campaigns, ["geo", "type", "iab"]);
 
