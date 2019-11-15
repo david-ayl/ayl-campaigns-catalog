@@ -25,7 +25,7 @@ $.get("scripts/campaigns.json", function(campaigns) {
 
   campaigns.forEach(function(campaign) {
     var campaign_tags = " " + campaign.geo + " " + campaign.type + " " + campaign.iab + " " + campaign.name;
-    var campaign_node = $("<li class='mix" + campaign_tags + "'><div class='mix-infos'><div class='tags-wrapper'><i class='icon-" + campaign.geo + "'></i><i class='icon-" + campaign.type + "'></i><i class='icon-" + campaign.iab + "'></i></div><div class='info'><h3 class='title'>" + campaign.name + "</h3><pre data-camptrack='" + campaign.ids.track + "' data-campcrea='" + campaign.ids.creative + "' class='id'>" + campaign.ids.campaign + "</pre></div><div class='trigger'>click to see</div><div class='overlays-infos'></div></div></li>");
+    var campaign_node = $("<li class='mix col-md-4" + campaign_tags + "'><a href='"+campaign.thumbnail+"' class='photography-entry img image-popup d-flex justify-content-center align-items-center' style='background-image:url("+campaign.thumbnail+")'><div class='overlay'></div><div class='text text-center'><h3>"+ campaign.name +"</h3></div></a></li>");
     $("#campaigns").append(campaign_node);
   });
 
@@ -68,6 +68,40 @@ $(document).ready(function() {
     if(e.which == 27) {
       removeCamp();
     }
+  });
+
+///////V2
+
+
+	// magnific popup
+	$('.image-popup').magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    closeBtnInside: false,
+    fixedContentPos: true,
+    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+     gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      verticalFit: true
+    },
+    zoom: {
+      enabled: false,
+      duration: 300 // don't foget to change the duration also in CSS
+    }
+  });
+
+  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
   });
 
 });

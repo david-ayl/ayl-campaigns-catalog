@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Medium.eot');
+  src: url('../fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Gotham-Medium.svg#Gotham-Ultra') format('svg'),
+       url('../fonts/Gotham-Medium.ttf') format('truetype'),
+       url('../fonts/Gotham-Medium.woff') format('woff'),
+       url('../fonts/Gotham-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Ultra.eot');
+  src: url('../fonts/Gotham-Ultra.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Gotham-Ultra.svg#Gotham-Ultra') format('svg'),
+       url('../fonts/Gotham-Ultra.ttf') format('truetype'),
+       url('../fonts/Gotham-Ultra.woff') format('woff'),
+       url('../fonts/Gotham-Ultra.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+$font-primary: 'Gotham',Arial, sans-serif;
+
+$white: #fff;
+$black: #000000;
+// $darken: #3a4348;
+
+$primary: #f5c19a;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($transition) {
+    -moz-transition:    all $transition ease;
+    -o-transition:      all $transition ease;
+    -webkit-transition: all $transition ease;
+    -ms-transition:     all $transition ease;
+    transition:         all $transition ease;
+}
+
+@mixin translateX($translatex) {
+  -moz-transform: translateX($translatex);
+  -webkit-transform: translateX($translatex);
+  -ms-transform: translateX($translatex);
+  -o-transform: translateX($translatex);
+  transform: translateX($translatex);
+}
+
+body {
+  font-family: $font-primary;
+  background: $white;
+  font-size: 16px;
+  font-weight: 400;
+  color: $black;
+}
+a {
+  transition: .3s all ease;
+  color: $black;
+  &:hover, &:focus {
+    text-decoration: none;
+    outline: none !important;
+  }
+}
+
+li{
+  list-style-type: none;
+}
+
+.no-gutters{
+  margin:0;
+  padding:0;
+}
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+  line-height: 1.5;
+  color: rgba(0,0,0,.8);
+  font-weight: 400;
+  font-family: $font-primary;
+}
