@@ -61,7 +61,7 @@ function serve(done) {
 
 function w(cb) {
   watch('src/*.pug', () => {
-    series(html)
+    html()
     rl()
   })
   watch('src/styles/**/*.scss', () => {
