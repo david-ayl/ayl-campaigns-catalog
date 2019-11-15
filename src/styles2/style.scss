@@ -1,16 +1,35 @@
-@import 'bootstrap/bootstrap';
-@import 'bootstrap/variables';
+@import "node_modules/bootstrap/scss/bootstrap";
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Medium.eot');
+  src: url('../fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Gotham-Medium.svg#Gotham-Ultra') format('svg'),
+       url('../fonts/Gotham-Medium.ttf') format('truetype'),
+       url('../fonts/Gotham-Medium.woff') format('woff'),
+       url('../fonts/Gotham-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
-$font-primary: 'Montserrat',Arial, sans-serif;
-$font-secondary: 'Poppins',Arial, sans-serif;
-$font-tertiary: 'Herr Von Muellerhoff', cursive;
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Ultra.eot');
+  src: url('../fonts/Gotham-Ultra.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Gotham-Ultra.svg#Gotham-Ultra') format('svg'),
+       url('../fonts/Gotham-Ultra.ttf') format('truetype'),
+       url('../fonts/Gotham-Ultra.woff') format('woff'),
+       url('../fonts/Gotham-Ultra.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+$font-primary: 'Gotham',Arial, sans-serif;
 
 $white: #fff;
 $black: #000000;
 // $darken: #3a4348;
 
-$primary: #f67e7d;
-$secondary: #fffb37;
+$primary: #f5c19a;
 
 
 @mixin border-radius($radius) {
@@ -42,31 +61,15 @@ html {
 body {
 	font-family: $font-primary;
 	background: $white;
-	font-size: 15px;
-	line-height: 1.8;
-	font-weight: 500;
-	color: lighten($black,60%);
-	&.offcanvas {
-		overflow-x: hidden;
-		#colorlib-aside {
-			@include translateX(0);
-			width: 270px;
-			background: $white;
-			z-index: 999;
-			position: fixed;
-		}
-		#colorlib-main, .colorlib-nav-toggle {
-			top: 0;
-			@include translateX(270px);
-		}
-	}
+	font-size: 16px;
+	font-weight: 400;
+	color: $black;
 }
 a {
 	transition: .3s all ease;
-	color: $primary;
+	color: $black;
 	&:hover, &:focus {
 		text-decoration: none;
-		color: $primary;
 		outline: none !important;
 	}
 }
@@ -75,7 +78,7 @@ h1, h2, h3, h4, h5,
 	line-height: 1.5;
 	color: rgba(0,0,0,.8);
 	font-weight: 400;
-	font-family: $font-secondary;
+	font-family: $font-primary;
 }
 
 
