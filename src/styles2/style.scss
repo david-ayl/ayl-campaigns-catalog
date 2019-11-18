@@ -3,6 +3,13 @@
 @import "magnific-popup.scss";
 @import "layout/globals.scss";
 
+.cd-fail-message{
+	text-align:center;
+	text-transform:capitalize;
+	font-weight:800;
+	font-size:3em;
+	color:#dce2e8;
+}
 
 #colorlib-page {
   width: 100%;
@@ -26,6 +33,9 @@
 	overflow-y: hidden;
 	z-index: 1001;
 	background: $primary;
+	@media screen and (min-resolution: 192dpi) {
+    	width:20% !important;
+  	}
 	@include transition(.5s);
 	@include media-breakpoint-up(lg){
 		width: 15%;
@@ -62,6 +72,10 @@
 			display: inline-block;
     		margin-right: 1em;
     		vertical-align: middle;
+    		@media screen and (min-resolution: 192dpi) {
+    			width:56px !important;
+    			height:56px !important;
+  			}
 		}
 		span{
 			font-size:1.5em;
@@ -70,6 +84,9 @@
 			display:inline-block;
 			vertical-align: middle;
 			max-width: 78%;
+			@media screen and (min-resolution: 192dpi) {
+    			font-size:1.25em !important;
+  			}
 		}
 	}
 	#colorlib-main-menu {
@@ -160,6 +177,9 @@
 	@include media-breakpoint-up(lg){
 		width: 85%;
 	}
+	@media screen and (min-resolution: 192dpi) {
+    	width:80% !important;
+  	}
 }
 
 
