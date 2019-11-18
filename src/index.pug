@@ -31,13 +31,12 @@ main.cd-main-content
               img#logo(src="images/logo.png", alt="logo")
               span Campaigns Catalog
           nav#colorlib-main-menu(role='navigation')
-            ul.filters-container.filter-wrapper
-              li.colorlib-active.filters-container.filter-wrapper
-                a(href='#') Countries
-                  +filters(["geo"])
-              li.filters-container.filter-wrapper
-                a(href='#') Categories
-                  +filters(["iab"])
+            div.filters_wrapper.active 
+              span Countries
+              +filters(["geo"])
+            div.filters_wrapper
+              span Categories
+              +filters(["iab"])
    
       #colorlib-main
         nav#top_menu.filters-container.filter-wrapper

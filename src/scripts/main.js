@@ -71,7 +71,17 @@ $(document).ready(function() {
   });
 
 ///////V2
+	//sidebar menu toggleclass active
+	$(".filters_wrapper span").click(function(){
+		$(".filters_wrapper").toggleClass("active");
+	});
 
+	//top menu current event
+	$("#top_menu li label").first().addClass("current");
+	$("#top_menu li label").click(function(){
+		$("#top_menu li label").removeClass("current");
+		$(this).toggleClass("current");
+	});
 
 	// magnific popup
 	$('.image-popup').magnificPopup({

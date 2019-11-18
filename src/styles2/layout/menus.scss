@@ -6,6 +6,16 @@
 	li{
 		display:inline-block;
 		margin-right:1em;
+		label{
+			text-transform: capitalize;
+			border-bottom:0px solid #f5c19a;
+			transition:all .3s ease;
+			&.current{
+				font-weight:800;
+				border-bottom:4px solid #f5c19a;
+			}
+		}
+
     }
   	#searchform{
   		margin-left:auto;
@@ -23,11 +33,15 @@
     	}
   		input{
   			max-width:150px;
-  			border-bottom:2px solid #000 !important;
+  			border-bottom:2px solid #dce2e8 !important;
 	  		outline:none;
 	  		border:none;
 	  		background:none;	
+	  		&::placeholder{
+  				color:#dce2e8;
+  			}
   		}
+  		
   	}
 }
 
@@ -42,6 +56,36 @@ ul.cd-filters.list{
 			display:none;
 		}
     }
+}
+
+#colorlib-main-menu{
+	.filters_wrapper{
+		margin-bottom:2em;
+		span{
+			cursor:pointer;
+		}
+		.cd-filter-block{
+			max-height:0;
+			overflow: hidden;
+			font-weight:400;
+			transition:all .5s ease;
+			label{
+				font-weight:400;
+				text-transform: uppercase;
+				font-size:.75em;
+			}
+			li{
+				margin:10px 0 5px 0 !important;
+			}
+		}
+	&.active{
+		font-weight:800;
+	}
+	&.active .cd-filter-block{
+		max-height:20vh !important;
+	}
+
+	}
 }
 
 
