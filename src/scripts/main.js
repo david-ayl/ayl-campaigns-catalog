@@ -24,8 +24,9 @@ $.get("scripts/campaigns.json", function(campaigns) {
   populate_filters(campaigns, ["geo", "type", "iab"]);
 
   campaigns.forEach(function(campaign) {
+  	var campaign_id = campaign.ids.campaign;
     var campaign_tags = " " + campaign.geo + " " + campaign.type + " " + campaign.iab + " " + campaign.name;
-    var campaign_node = $("<li class='mix col-md-4" + campaign_tags + "'><a href='"+campaign.thumbnail+"' class='photography-entry img image-popup d-flex justify-content-center align-items-center' style='background-image:url("+campaign.thumbnail+")'><div class='overlay'></div><div class='infos text'><img class='logo' src="+campaign.logo+" alt="+campaign.name+" /><div><span>"+campaign.type+"<span><br/><span>"+campaign.geo+"</span></div></div><div class='text text-center'><h3 class='title'>"+ campaign.name +"</h3><span class='preview_link'>Preview</span><span class='like'> </span><span class='copy'> </span></div></a></li>");
+    var campaign_node = $("<li class='mix col-md-4" + campaign_tags + "'><a href='#' class='trigger photography-entry img image-popup d-flex justify-content-center align-items-center' style='background-image:url("+campaign.thumbnail+")'><div class='overlay'></div><div class='infos text'><img class='logo' src="+campaign.logo+" alt="+campaign.name+" /><div><span>"+campaign.type+"<span><br/><span>"+campaign.geo+"</span></div></div><div class='text text-center'><span class='title'>"+ campaign.name +"</span><span class='campaign_id id' data-camptrack='" + campaign.ids.track + "' data-campcrea='" + campaign.ids.creative + "'>"+ campaign_id +"</span><span class='preview_link'>Preview</span><span class='like'> </span><span class='copy'> </span></div></a></li>");
     $("#campaigns").append(campaign_node);
   });
 
@@ -42,7 +43,6 @@ $(document).ready(function() {
     var campId = $(el).closest('li').find('.id').html();
     var campTrack = $(el).closest('li').find('.id').attr("data-camptrack");
     var campCrea = $(el).closest('li').find('.id').attr("data-campcrea");
-    $('#overflay-iframe-container').addClass('visible');
     $('.campaign-iframe').attr({
       'src' : 'iframe.html',
       'data-camp' : campId,
@@ -85,34 +85,25 @@ $(document).ready(function() {
 
 	// magnific popup
 	$('.image-popup').magnificPopup({
-    type: 'image',
     closeOnContentClick: true,
     closeBtnInside: false,
     fixedContentPos: true,
     mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-     gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    items: {
+    	src:$("<iframe class='campaign-iframe' frameborder='0' scrolling='no'></iframe>"),
+    	type: "inline"
     },
-    image: {
-      verticalFit: true
-    },
-    zoom: {
-      enabled: false,
-      duration: 300 // don't foget to change the duration also in CSS
-    }
-  });
-
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
-
-    fixedContentPos: false
-  });
+    callbacks: {
+	    open: function() {
+	     	displayCamp
+	    },
+	    close: function() {
+	      	removeCamp
+	    }
+  	}
+  })
+/////////
+  
 
 });
 
