@@ -25,7 +25,7 @@ $.get("scripts/campaigns.json", function(campaigns) {
 
   campaigns.forEach(function(campaign) {
     var campaign_tags = " " + campaign.geo + " " + campaign.type + " " + campaign.iab + " " + campaign.name;
-    var campaign_node = $("<li class='mix col-md-4" + campaign_tags + "'><a href='"+campaign.thumbnail+"' class='photography-entry img image-popup d-flex justify-content-center align-items-center' style='background-image:url("+campaign.thumbnail+")'><div class='overlay'></div><div class='text text-center'><h3>"+ campaign.name +"</h3></div></a></li>");
+    var campaign_node = $("<li class='mix col-md-4" + campaign_tags + "'><a href='"+campaign.thumbnail+"' class='photography-entry img image-popup d-flex justify-content-center align-items-center' style='background-image:url("+campaign.thumbnail+")'><div class='overlay'></div><div class='infos text'><img class='logo' src="+campaign.logo+" alt="+campaign.name+" /><div><span>"+campaign.type+"<span><br/><span>"+campaign.geo+"</span></div></div><div class='text text-center'><h3 class='title'>"+ campaign.name +"</h3><span class='preview_link'>Preview</span><span class='like'> </span><span class='copy'> </span></div></a></li>");
     $("#campaigns").append(campaign_node);
   });
 

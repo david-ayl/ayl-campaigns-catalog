@@ -5,6 +5,7 @@
     "type":"video",
     "iab":"man",
     "thumbnail":"https://cdn1us.denofgeek.com/sites/denofgeekus/files/2019/11/death_stranding_1.jpg",
+    "logo":"images/logos/test_logo.png",
     "ids":{
       "campaign":"b38727cedeafa0a209a26d849f68077d",
       "track":"",
@@ -17,6 +18,7 @@
     "type":"display",
     "iab":"bank",
     "thumbnail":"https://cdn1us.denofgeek.com/sites/denofgeekus/files/2019/11/death_stranding_1.jpg",
+    "logo":"images/logos/test_logo.png",
     "ids":{
       "campaign":"388baf880744b085d9e0ff31da525f8e",
       "track":"",
@@ -29,6 +31,7 @@
     "type":"display",
     "iab":"holidays",
     "thumbnail":"https://cdn1us.denofgeek.com/sites/denofgeekus/files/2019/11/death_stranding_1.jpg",
+    "logo":"images/logos/test_logo.png",
     "ids":{
       "campaign":"b5111a214f414b5af8082b3ed23ed168",
       "track":"",

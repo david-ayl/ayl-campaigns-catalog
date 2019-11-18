@@ -15,7 +15,7 @@ html(lang="fr")
       mixin filters(items)
         each item in items
           div(class="cd-filter-block " + item)
-            h5.filter-title 
+            //-h5.filter-title 
             ul.cd-filter-content.cd-filters.list
               li.input-container
                 input.filter(data-filter="*", type="radio", id="checkbox-all-" + item, name= item, checked)
@@ -42,12 +42,12 @@ main.cd-main-content
       #colorlib-main
         nav#top_menu.filters-container.filter-wrapper
           +filters(["type"])
-        div#searchform
-          form
-            div.cd-filter-content.text-filter-content
-              input.text-filter-input(type="search", id="text-filter", required)
-              span.border
-              label.text-filter-label(for="text-filter") Search :
+          div#searchform
+            form
+              div.cd-filter-content.text-filter-content
+                //-label.text-filter-label(for="text-filter") Search :
+                input.text-filter-input(type="search", id="text-filter",placeholder="Search", required)
+                //span.border
         section.ftco-section-2.cd-gallery
               ul#campaigns.row.no-gutters
               div.cd-fail-message no results
