@@ -111,7 +111,7 @@ $(document).ready(function() {
 		 document.execCommand("copy");
 		 $temp.remove();
 	}
-  	$(document).click(function(){
+  	$("#campaigns").click(function(){
   		var copied = $(event.target).closest("li").find(".campaign_id");
   		copyToClipboard(copied);
   	})
