@@ -26,7 +26,7 @@ $.get("scripts/campaigns.json", function(campaigns) {
   campaigns.forEach(function(campaign) {
   	var campaign_id = campaign.ids.campaign;
     var campaign_tags = " " + campaign.geo + " " + campaign.type + " " + campaign.iab + " " + campaign.name;
-    var campaign_node = $("<li class='mix col-md-4" + campaign_tags + "'><a href='"+campaign.thumbnail+"' class='trigger photography-entry img image-popup d-flex justify-content-center align-items-center' style='background-image:url("+campaign.thumbnail+")'><div class='overlay'></div><div class='infos text'><img class='logo' src="+campaign.logo+" alt="+campaign.name+" /><div><span>"+campaign.type+"<span><br/><span>"+campaign.geo+"</span></div></div><div class='text text-center'><span class='title'>"+ campaign.name +"</span><span class='campaign_id id' data-camptrack='" + campaign.ids.track + "' data-campcrea='" + campaign.ids.creative + "'>"+ campaign_id +"</span><span class='preview_link'>Preview</span><span class='like'> </span><span class='copy'> </span></div></a></li>");
+    var campaign_node = $("<li class='mix col-md-4" + campaign_tags + "'><a href='"+campaign.thumbnail+"' class='trigger photography-entry img image-popup d-flex justify-content-center align-items-center' style='background-image:url("+campaign.thumbnail+")'><div class='overlay'></div><div class='infos text'><img class='logo' src="+campaign.logo+" alt="+campaign.name+" /><div><span>"+campaign.type+"<span><br/><span>"+campaign.geo+"</span></div></div><div class='text text-center'><span class='title'>"+ campaign.name +"</span><span class='campaign_id id' data-camptrack='" + campaign.ids.track + "' data-campcrea='" + campaign.ids.creative + "'>"+ campaign_id +"</span><span class='preview_link'>Preview</span></div></a><span class='like'> </span><span class='copy'> </span></li>");
     $("#campaigns").append(campaign_node);
   });
 
@@ -85,23 +85,36 @@ $(document).ready(function() {
 
 	// magnific popup
 	$('.image-popup').magnificPopup({
-    closeOnContentClick: true,
-    closeBtnInside: false,
-    fixedContentPos: true,
-    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-    items: {
-    	src:$("<iframe class='campaign-iframe' frameborder='0' scrolling='no'></iframe>"),
-    	type: "inline"
-    },
-    callbacks: {
-	    open: function() {
-	     	displayCamp
+	    closeOnContentClick: true,
+	    closeBtnInside: false,
+	    fixedContentPos: true,
+	    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+	    items: {
+	    	src:$("<iframe class='campaign-iframe' frameborder='0' scrolling='no'></iframe>"),
+	    	type: "inline"
 	    },
-	    close: function() {
-	      	removeCamp
-	    }
-  	}
-  })
+	    callbacks: {
+		    open: function() {
+		     	displayCamp
+		    },
+		    close: function() {
+		      	removeCamp
+		    }
+	  	}
+  	});
+
+  	//copy to clipboard event on items
+  	function copyToClipboard(element) {
+		 var $temp = $("<input>");
+		 $("body").append($temp);
+		 $temp.val($(element).html()).select();
+		 document.execCommand("copy");
+		 $temp.remove();
+	}
+  	$(document).click(function(){
+  		var copied = $(event.target).closest("li").find(".campaign_id");
+  		copyToClipboard(copied);
+  	})
 /////////
   
 
