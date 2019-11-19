@@ -522,7 +522,7 @@
   {
     "name":"Presbytie",
     "geo":"fr",
-    "type":"story",
+    "type":"sponsor post",
     "iab":"health",
     "thumbnail":"images/thumbnails/presbytie_thumb.jpg",
     "logo":"images/logos/presbytie_logo.png",
@@ -535,7 +535,7 @@
   {
     "name":"Center Parcs",
     "geo":"fr",
-    "type":"story",
+    "type":"sponsor post",
     "iab":"holidays",
     "thumbnail":"images/thumbnails/centerparcs_thumb.jpg",
     "logo":"images/logos/centerparcs_logo.png",
@@ -964,7 +964,7 @@
   {
     "name":"Samsung",
     "geo":"it",
-    "type":"story",
+    "type":"sponsor post",
     "iab":"hightech",
     "thumbnail":"images/thumbnails/samsung2_thumb.jpg",
     "logo":"images/logos/samsung_logo.png",
@@ -1086,19 +1086,6 @@
     "logo":"images/logos/royalcanin_logo.png",
     "ids":{
       "campaign":"6dbb98366d98781b705b12e72db65885",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Gucci",
-    "geo":"fr",
-    "type":"slideshow",
-    "iab":"jewelry",
-    "thumbnail":"images/thumbnails/gucci_thumb.jpg",
-    "logo":"images/logos/gucci_logo.png",
-    "ids":{
-      "campaign":"de6c4ff9a4962157e82a9b594548d648",
       "track":"",
       "creative":""
     }
