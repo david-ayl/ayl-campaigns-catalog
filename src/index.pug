@@ -40,6 +40,7 @@ main.cd-main-content
           footer.colorlib-footer copyright ©2019
    
       #colorlib-main
+        div#errormessage
         nav#top_menu.filters-container.filter-wrapper
           +filters(["type"])
           div#searchform
@@ -48,6 +49,7 @@ main.cd-main-content
                 //-label.text-filter-label(for="text-filter") Search :
                 input.text-filter-input(type="search", id="text-filter",placeholder="Search", required)
                 //span.border
+          span#like_filter.like
         section.ftco-section-2.cd-gallery
               ul#campaigns.row.no-gutters
               div.cd-fail-message no results...

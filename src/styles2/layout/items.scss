@@ -58,6 +58,9 @@
                 -webkit-mask-size: cover;
                 mask-size: cover;
             }
+            &.selected::before{
+                background:#f5c19a;
+            }
         }
         .copy{
             position:absolute;

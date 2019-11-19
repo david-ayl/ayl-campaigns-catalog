@@ -71,7 +71,7 @@ $(document).ready(function() {
   });
 
 ///////V2
-	//sidebar menu toggleclass active
+	//sidebar menu toggleClass active
 	$(".filters_wrapper span").click(function(){
 		$(".filters_wrapper").toggleClass("active");
 	});
@@ -115,6 +115,33 @@ $(document).ready(function() {
   		var copied = $(event.target).closest("li").find(".campaign_id");
   		copyToClipboard(copied);
   	})
+
+  	//like svg on click event
+  	$(".like").click(function(){
+  		$(this).toggleClass("selected");
+  		$(this).closest("li").toggleClass("checked");
+  	})
+  	$("#like_filter").click(function(){
+  		if (($("#like_filter").hasClass("selected"))){
+  			if($(".cd-gallery li").hasClass("checked")){
+	  			$(".cd-gallery li").hide();
+	  			$(".cd-gallery li.checked").show();
+  			} else {
+  				$(this).removeClass("selected");
+  				$("#errormessage").slideDown().text("No fav").append("<a href='#' id='close'></a>");
+  				$("#close").click(function(){
+  					$("#errormessage").slideUp();
+  				})
+  			}
+  			
+  		} else {
+  			$(".cd-gallery li").removeClass("checked");
+  			$(".cd-gallery li .like").removeClass("selected");
+  			$(".cd-gallery li").show();
+  		}
+  	})
+
+
 /////////
   
 

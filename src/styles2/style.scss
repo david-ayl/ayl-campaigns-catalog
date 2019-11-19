@@ -11,6 +11,32 @@
 	color:#dce2e8;
 }
 
+#errormessage{
+	position: relative;
+	background:$black;
+	color:$white;
+	font-size:1.25em;
+	text-align: center;
+	#close{
+		position: absolute;
+		right:1em;
+		background:none;
+		border:none;
+		&::after{
+    		width: 24px;
+			height: 24px;
+			display: inline-block;
+			vertical-align: middle;
+			content: '';
+			background:$white;
+			-webkit-mask: url(../../images/icons/close.svg) no-repeat 50% 50%;
+    		mask: url(../../images/icons/close.svg) no-repeat 50% 50%;
+   			-webkit-mask-size: cover;
+    		mask-size: cover;
+    	}
+	}
+}
+
 #colorlib-page {
   width: 100%;
   overflow: hidden;

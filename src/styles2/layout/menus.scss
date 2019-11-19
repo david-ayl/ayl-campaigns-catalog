@@ -43,7 +43,27 @@
   		}
   		
   	}
+  	#like_filter{
+        cursor:pointer;
+        margin-left:2em;
+        height:42px;
+        &::before{
+            width: 42px;
+            height: 42px;
+            display: inline-block;
+            content: '';
+            background:#000;
+            -webkit-mask: url(../../images/icons/heart.svg) no-repeat 50% 50%;
+            mask: url(../../images/icons/heart.svg) no-repeat 50% 50%;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+        }
+        &.selected::before{
+        	background:#f5c19a;
+        }
+    }
 }
+
 
 ul.cd-filters.list{
   	margin:0;
