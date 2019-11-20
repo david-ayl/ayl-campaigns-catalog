@@ -485,7 +485,7 @@
     "geo":"italy",
     "type":"sponsor post",
     "iab":"technology",
-    "thumbnail":"images/thumbnails/samsung2_thumb.jpg",
+    "thumbnail":"images/thumbnails/samsung_thumb.jpg",
     "logo":"images/logos/samsung_logo.png",
     "ids":{
       "campaign":"5cef79388bc1b6bb502e4af660cdde4c",
@@ -498,22 +498,10 @@
     "geo":"spain",
     "type":"display",
     "iab":"automotive",
-    "thumbnail":"images/thumbnails/opelmokka_thumb.jpg",
-    "logo":"images/logos/opelmokka_logo.png",
+    "thumbnail":"images/thumbnails/opel_thumb.jpg",
+    "logo":"images/logos/opel_logo.png",
     "ids":{
       "campaign":"ebd3862926e176d1277cdb6edc171439",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Ebay",
-    "geo":"spain",
-    "type":"display",
-    "iab":"economy",
-    "thumbnail":"images/tebay_logo.png",
-    "ids":{
-      "campaign":"0ea2c082cd60dd79b95cc3370fbf2606",
       "track":"",
       "creative":""
     }
@@ -523,62 +511,10 @@
     "geo":"france",
     "type":"display",
     "iab":"travel",
-    "thumbnail":"images/thumbnails/aifrance2_thumb.jpg",
+    "thumbnail":"images/thumbnails/airfrance_thumb.jpg",
     "logo":"images/logos/airfrance_logo.png",
     "ids":{
       "campaign":"aa7d982943c74b42293cc44b622a9e1c",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"American Tourister",
-    "geo":"france",
-    "type":"display",
-    "iab":"travel",
-    "thumbnail":"images/thumbnails/americantourister_thumb.jpg",
-    "logo":"images/logos/americantourister_logo.png",
-    "ids":{
-      "campaign":"b7c26cf0c870bcfce9e7e86e28200483",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Kenzo",
-    "geo":"france",
-    "type":"video",
-    "iab":"mode-beauty",
-    "thumbnail":"images/thumbnails/kenzo_thumb.jpg",
-    "logo":"images/logos/kenzo_logo.png",
-    "ids":{
-      "campaign":"5394b7d43084a0755a52d533efe2843a",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"BMW",
-    "geo":"france",
-    "type":"video",
-    "iab":"automotive",
-    "thumbnail":"images/thumbnails/bmw_thumb.jpg",
-    "logo":"images/logos/bmw_logo.png",
-    "ids":{
-      "campaign":"9ed8ed33132e2d410d67eb58e4b92468",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Burberry",
-    "geo":"us / uk",
-    "type":"display",
-    "iab":"mode-beauty",
-    "thumbnail":"images/thumbnails/burberry_thumb.jpg",
-    "logo":"images/logos/burberry_logo.png",
-    "ids":{
-      "campaign":"65797de1f1ee06675185f6582a52747b",
       "track":"",
       "creative":""
     }
@@ -615,7 +551,7 @@
     "type":"display",
     "iab":"mode-beauty",
     "thumbnail":"images/thumbnails/poisongirl_thumb.jpg",
-    "logo":"images/logos/poisongirl_logo.png",
+    "logo":"images/logos/dior_logo.png",
     "ids":{
       "campaign":"4eefe309c1a2d8f75b5d12920e6f25d0",
       "track":"",
@@ -631,32 +567,6 @@
     "logo":"images/logos/ducati_logo.png",
     "ids":{
       "campaign":"8de4501fda7e127447f3ec25c5472f77",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"ING",
-    "geo":"france",
-    "type":"display",
-    "iab":"economy",
-    "thumbnail":"images/thumbnails/ing_thumb.jpg",
-    "logo":"images/logos/ing_logo.png",
-    "ids":{
-      "campaign":"80391e6327760f97f0a0296b474bd13d",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Parrot",
-    "geo":"france",
-    "type":"display",
-    "iab":"technology",
-    "thumbnail":"images/thumbnails/parrot_thumb.jpg",
-    "logo":"images/logos/parrot_logo.png",
-    "ids":{
-      "campaign":"43322cc8b4338698b48864ea98809ad7",
       "track":"",
       "creative":""
     }
