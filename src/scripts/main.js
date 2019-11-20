@@ -34,9 +34,7 @@ $.get("scripts/campaigns.json", function(campaigns) {
 
 $(document).ready(function() {
 
-  $(document).on("click", "#modal", function() {
-    removeModal();
-  });
+
 
   var displayCamp = function(e) {
     var el = e.target
@@ -63,7 +61,6 @@ $(document).ready(function() {
 
   $(document)
   .on('click', '.trigger', displayCamp)
-  .on('click', '#close-iframe', removeCamp)
   .keyup(function(e) {
     if(e.which == 27) {
       removeCamp();

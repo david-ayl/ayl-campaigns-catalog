@@ -52,32 +52,6 @@
     }
   },
   {
-    "name":"Close Up",
-    "geo":"apac",
-    "type":"display",
-    "iab":"other",
-    "thumbnail":"images/thumbnails/closeup_thumb.jpg",
-    "logo":"images/logos/closeup_logo.png",
-    "ids":{
-      "campaign":"22a9461987cff1b7ed794d3431877403",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Nike",
-    "geo":"apac",
-    "type":"display",
-    "iab":"sport",
-    "thumbnail":"images/thumbnails/nike_thumb.jpg",
-    "logo":"images/logos/nike_logo.png",
-    "ids":{
-      "campaign":"73fc4cd89e7eea3ca47123cb53c9243e",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
     "name":"Oreo",
     "geo":"apac",
     "type":"video",
@@ -86,32 +60,6 @@
     "logo":"images/logos/oreo_logo.png",
     "ids":{
       "campaign":"73fc4cd89e7eea3ca47123cb53c9243e",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Oreo",
-    "geo":"apac",
-    "type":"display",
-    "iab":"retail",
-    "thumbnail":"images/thumbnails/oreo2_thumb.jpg",
-    "logo":"images/logos/oreo_logo.png",
-    "ids":{
-      "campaign":"dd319897adf6e00cdcfbe67e909c360f",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Danone",
-    "geo":"apac",
-    "type":"display",
-    "iab":"other",
-    "thumbnail":"images/thumbnails/danone_thumb.jpg",
-    "logo":"images/logos/danone_logo.png",
-    "ids":{
-      "campaign":"5101606b00edc190fa85d5e8796e8b5c",
       "track":"",
       "creative":""
     }
@@ -132,64 +80,12 @@
   {
     "name":"Chanel",
     "geo":"apac",
-    "type":"video",
+    "type":"display",
     "iab":"mode-beauty",
     "thumbnail":"images/thumbnails/chanel_thumb.jpg",
     "logo":"images/logos/chanel_logo.png",
     "ids":{
-      "campaign":"f5f559dedfdcfc903788643275534bcc",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Chanel",
-    "geo":"apac",
-    "type":"display",
-    "iab":"mode-beauty",
-    "thumbnail":"images/thumbnails/chanel2_thumb.jpg",
-    "logo":"images/logos/chanel_logo.png",
-    "ids":{
       "campaign":"14cf6ebdd8c5780556005e3c9d1e3192",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"SK-II",
-    "geo":"apac",
-    "type":"display",
-    "iab":"mode-beauty",
-    "thumbnail":"images/thumbnails/skii_thumb.jpg",
-    "logo":"images/logos/skii_logo.png",
-    "ids":{
-      "campaign":"84c000c8fad8beec416abc90447cb4a4",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Airfrance",
-    "geo":"apac",
-    "type":"display",
-    "iab":"travel",
-    "thumbnail":"images/thumbnails/airfrance_thumb.jpg",
-    "logo":"images/logos/airfrance_logo.png",
-    "ids":{
-      "campaign":"3e371f4a30437c3a683bb1d998d6dc94",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Singapore Airlines",
-    "geo":"apac",
-    "type":"video",
-    "iab":"travel",
-    "thumbnail":"images/thumbnails/singaporeairlines_thumb.jpg",
-    "logo":"images/logos/singaporeairlines_logo.png",
-    "ids":{
-      "campaign":"c20a394bf9f40409b2a9a7a9a40cb7cb",
       "track":"",
       "creative":""
     }
@@ -209,7 +105,7 @@
   },
   {
     "name":"Audi (Ad Domain)",
-    "geo":"fr",
+    "geo":"france",
     "type":"display",
     "iab":"automotive",
     "thumbnail":"images/thumbnails/audi_thumb.jpg",
@@ -225,7 +121,7 @@
     "geo":"us / uk",
     "type":"display",
     "iab":"automotive",
-    "thumbnail":"images/thumbnails/audi2_thumb.jpg",
+    "thumbnail":"images/thumbnails/audi_thumb.jpg",
     "logo":"images/logos/audi_logo.png",
     "ids":{
       "campaign":"829060c330a5d312727d93f2552b2443",
@@ -238,7 +134,7 @@
     "geo":"us / uk",
     "type":"display",
     "iab":"automotive",
-    "thumbnail":"images/thumbnails/audi3_thumb.jpg",
+    "thumbnail":"images/thumbnails/audi_thumb.jpg",
     "logo":"images/logos/audi_logo.png",
     "ids":{
       "campaign":"af21d204dc21d355c874fe1001e0e894",
@@ -248,7 +144,7 @@
   },
   {
     "name":"DS3 display playlist",
-    "geo":"fr",
+    "geo":"france",
     "type":"display",
     "iab":"automotive",
     "thumbnail":"images/thumbnails/ds3_thumb.jpg",
@@ -364,19 +260,6 @@
     }
   },
   {
-    "name":"Gardena",
-    "geo":"germany",
-    "type":"display",
-    "iab":"nature",
-    "thumbnail":"images/thumbnails/gardena_thumb.jpg",
-    "logo":"images/logos/gardena_logo.png",
-    "ids":{
-      "campaign":"ee8e52705ae7534549e0e314ca15feb6",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
     "name":"Thomas Sabo",
     "geo":"germany",
     "type":"display",
@@ -403,32 +286,6 @@
     }
   },
   {
-    "name":"Happy Dog",
-    "geo":"germany",
-    "type":"display",
-    "iab":"other",
-    "thumbnail":"images/thumbnails/happydog_thumb.jpg",
-    "logo":"images/logos/happydog_logo.png",
-    "ids":{
-      "campaign":"f39a801957cd508aaf80859141460bcc",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Aldi Süd",
-    "geo":"germany",
-    "type":"display",
-    "iab":"economy",
-    "thumbnail":"images/thumbnails/aldisud_thumb.jpg",
-    "logo":"images/logos/aldisud_logo.png",
-    "ids":{
-      "campaign":"83552a8c96ddcbe2c6dfd00283b31561",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
     "name":"Hugo Boss",
     "geo":"germany",
     "type":"display",
@@ -437,32 +294,6 @@
     "logo":"images/logos/hugoboss_logo.png",
     "ids":{
       "campaign":"5c22267f6369fb4991c6d6856d06f248",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Santander",
-    "geo":"spain",
-    "type":"display",
-    "iab":"economy",
-    "thumbnail":"images/thumbnails/santander_thumb.jpg",
-    "logo":"images/logos/santander_logo.png",
-    "ids":{
-      "campaign":"b866dad7fbb0a85761502fa0f041bbda",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Liilu",
-    "geo":"germany",
-    "type":"display",
-    "iab":"other",
-    "thumbnail":"images/thumbnails/liilu_thumb.jpg",
-    "logo":"images/logos/liilu_logo.png",
-    "ids":{
-      "campaign":"f39718e721ebd2e16b30c10c473d93f1",
       "track":"",
       "creative":""
     }
@@ -520,21 +351,8 @@
     }
   },
   {
-    "name":"Presbytie",
-    "geo":"fr",
-    "type":"sponsor post",
-    "iab":"health",
-    "thumbnail":"images/thumbnails/presbytie_thumb.jpg",
-    "logo":"images/logos/presbytie_logo.png",
-    "ids":{
-      "campaign":"41e6a0d36c3efd35e1c1d4ce6167f6d5",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
     "name":"Center Parcs",
-    "geo":"fr",
+    "geo":"france",
     "type":"sponsor post",
     "iab":"travel",
     "thumbnail":"images/thumbnails/centerparcs_thumb.jpg",
@@ -572,73 +390,8 @@
     }
   },
   {
-    "name":"Seat Leon",
-    "geo":"spain",
-    "type":"video",
-    "iab":"automotive",
-    "thumbnail":"images/thumbnails/seat_thumb.jpg",
-    "logo":"images/logos/seat_logo.png",
-    "ids":{
-      "campaign":"5a6822f8f1f301033dcf64f582c7f3fe",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Alienware",
-    "geo":"fr",
-    "type":"display",
-    "iab":"technology",
-    "thumbnail":"images/thumbnails/alienware_thumb.jpg",
-    "logo":"images/logos/alienware_logo.png",
-    "ids":{
-      "campaign":"d35e6191fefe7bd49f2b544b291fa6e9",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Maisons du Monde",
-    "geo":"fr",
-    "type":"display",
-    "iab":"nature",
-    "thumbnail":"images/thumbnails/maisonsdumonde_thumb.jpg",
-    "logo":"images/logos/maisonsdumonde_logo.png",
-    "ids":{
-      "campaign":"9b4f3596787b252c7f66187ea6fa2b43",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"M.A.C",
-    "geo":"fr",
-    "type":"display",
-    "iab":"mode-beauty",
-    "thumbnail":"images/thumbnails/mac_thumb.jpg",
-    "logo":"images/logos/mac_logo.png",
-    "ids":{
-      "campaign":"2451b1db82e0d22f5a116147f0169a8f",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Zara",
-    "geo":"fr",
-    "type":"display",
-    "iab":"mode-beauty",
-    "thumbnail":"images/thumbnails/zara_thumb.jpg",
-    "logo":"images/logos/zara_logo.png",
-    "ids":{
-      "campaign":"73e831d3f468ac6076a5505a696d36ac",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
     "name":"Bose",
-    "geo":"fr",
+    "geo":"france",
     "type":"display",
     "iab":"technology",
     "thumbnail":"images/thumbnails/bose_thumb.jpg",
@@ -650,21 +403,8 @@
     }
   },
   {
-    "name":"Wilkinson",
-    "geo":"fr",
-    "type":"video",
-    "iab":"other",
-    "thumbnail":"images/thumbnails/wilkinson_thumb.jpg",
-    "logo":"images/logos/wilkinson_logo.png",
-    "ids":{
-      "campaign":"4401a015d21308a9bf301abf7011af15",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
     "name":"Tiffany & Co.",
-    "geo":"fr",
+    "geo":"france",
     "type":"video",
     "iab":"luxe",
     "thumbnail":"images/thumbnails/tiffany_thumb.jpg",
@@ -676,112 +416,8 @@
     }
   },
   {
-    "name":"Hasbro",
-    "geo":"fr",
-    "type":"video",
-    "iab":"other",
-    "thumbnail":"images/thumbnails/hasbro_thumb.jpg",
-    "logo":"images/logos/hasbro_logo.png",
-    "ids":{
-      "campaign":"8cdfeaf4a9a0e5ed68ec6be8e6be658e",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Boiron",
-    "geo":"fr",
-    "type":"video",
-    "iab":"health",
-    "thumbnail":"images/thumbnails/boiron_thumb.jpg",
-    "logo":"images/logos/boiron_logo.png",
-    "ids":{
-      "campaign":"d87229a882a62e630bc68c763c98cc94",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Booking",
-    "geo":"fr",
-    "type":"video",
-    "iab":"travel",
-    "thumbnail":"images/thumbnails/booking_thumb.jpg",
-    "logo":"images/logos/booking_logo.png",
-    "ids":{
-      "campaign":"a20bb26289b9331a59c9c97ba00719a0",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Royal Canin",
-    "geo":"fr",
-    "type":"video",
-    "iab":"other",
-    "thumbnail":"images/thumbnails/royalcanin_thumb.jpg",
-    "logo":"images/logos/royalcanin_logo.png",
-    "ids":{
-      "campaign":"0de0e0df712e6b1b12517da79791c9a4",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Center Parc",
-    "geo":"fr",
-    "type":"video",
-    "iab":"nature",
-    "thumbnail":"images/thumbnails/centerparcs2_thumb.jpg",
-    "logo":"images/logos/centerparcs_logo.png",
-    "ids":{
-      "campaign":"6d3fcca4ec21fbf2a0e094ff88f4469d",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Amazon",
-    "geo":"fr",
-    "type":"video",
-    "iab":"economy",
-    "thumbnail":"images/thumbnails/amazon_thumb.jpg",
-    "logo":"images/logos/amazon_logo.png",
-    "ids":{
-      "campaign":"de19ea005308fea7af8b0a19c99d28b8",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Samsung",
-    "geo":"fr",
-    "type":"video",
-    "iab":"technology",
-    "thumbnail":"images/thumbnails/samsung_thumb.jpg",
-    "logo":"images/logos/samsung_logo.png",
-    "ids":{
-      "campaign":"23139ac3d58270955c33865fb359dbc1",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Décathlon",
-    "geo":"fr",
-    "type":"video",
-    "iab":"sport",
-    "thumbnail":"images/thumbnails/decathlon2_thumb.jpg",
-    "logo":"images/logos/decathlon_logo.png",
-    "ids":{
-      "campaign":"af419869e4f67647aed75848a23047ec",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
     "name":"Cartier",
-    "geo":"fr",
+    "geo":"france",
     "type":"display",
     "iab":"luxe",
     "thumbnail":"images/thumbnails/cartier_thumb.jpg",
@@ -793,102 +429,11 @@
     }
   },
   {
-    "name":"Décathlon",
-    "geo":"fr",
-    "type":"display",
-    "iab":"sport",
-    "thumbnail":"images/thumbnails/decathlon3_thumb.jpg",
-    "logo":"images/logos/decathlon_logo.png",
-    "ids":{
-      "campaign":"63a6fc03d44da004d6eca41dcbe26b71",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Jacadi",
-    "geo":"fr",
-    "type":"display",
-    "iab":"other",
-    "thumbnail":"images/thumbnails/jacadi_thumb.jpg",
-    "logo":"images/logos/jacadi_logo.png",
-    "ids":{
-      "campaign":"abf12125cfa46322ea56d6de88d73255",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Celio",
-    "geo":"fr",
-    "type":"display",
-    "thumbnail":"images/thumbnails/celio_thumb.jpg",
-    "logo":"images/logos/celio_logo.png",
-    "iab":"other",
-    "ids":{
-      "campaign":"e0425db01f64a3c69b09fcd41edb0ca8",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Visit Corsica",
-    "geo":"fr",
-    "type":"display",
-    "iab":"nature",
-    "thumbnail":"images/thumbnails/visitcorsica_thumb.jpg",
-    "logo":"images/logos/visitcorsica_logo.png",
-    "ids":{
-      "campaign":"d5773d178d2c571e8821eddea3ab9544",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Caudalie",
-    "geo":"fr",
-    "type":"display",
-    "iab":"health",
-    "thumbnail":"images/thumbnails/caudalie_thumb.jpg",
-    "logo":"images/logos/caudalie_logo.png",
-    "ids":{
-      "campaign":"5a288d5661a7d85a371ce776673d5d8f",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Bonduelle",
-    "geo":"fr",
-    "type":"display",
-    "iab":"retail",
-    "thumbnail":"images/thumbnails/bonduelle_thumb.jpg",
-    "logo":"images/logos/bonduelle_logo.png",
-    "ids":{
-      "campaign":"5c87969de917a6eafacd2127f558b044",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Mastercard",
-    "geo":"germany",
-    "type":"display",
-    "iab":"economy",
-    "thumbnail":"images/thumbnails/mastercard_thumb.jpg",
-    "logo":"images/logos/mastercard_logo.png",
-    "ids":{
-      "campaign":"3650d4a64a4e9831a4ed0e5f04b1bedb",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
     "name":"Audi (Ad Domain)",
     "geo":"germany",
     "type":"display",
     "iab":"automotive",
-    "thumbnail":"images/thumbnails/audi4_thumb.jpg",
+    "thumbnail":"images/thumbnails/audi_thumb.jpg",
     "logo":"images/logos/audi_logo.png",
     "ids":{
       "campaign":"13a16a0efc444bb4040b26a65bcd7351",
@@ -901,7 +446,7 @@
     "geo":"germany",
     "type":"video",
     "iab":"automotive",
-    "thumbnail":"images/thumbnails/audi5_thumb.jpg",
+    "thumbnail":"images/thumbnails/audi_thumb.jpg",
     "logo":"images/logos/audi_logo.png",
     "ids":{
       "campaign":"9b8ddce725b92549f5d96845702e62a6",
@@ -911,7 +456,7 @@
   },
   {
     "name":"Axa",
-    "geo":"fr",
+    "geo":"france",
     "type":"display",
     "iab":"economy",
     "thumbnail":"images/thumbnails/axa_thumb.jpg",
@@ -923,34 +468,8 @@
     }
   },
   {
-    "name":"Visit Barbados",
-    "geo":"us / uk",
-    "type":"video",
-    "iab":"travel",
-    "thumbnail":"images/thumbnails/visitbarbados_thumb.jpg",
-    "logo":"images/logos/visitbarbados_logo.png",
-    "ids":{
-      "campaign":"0f17014412da0f1f8011fac3fef30427",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Bezoya",
-    "geo":"spain",
-    "type":"display",
-    "iab":"retail",
-    "thumbnail":"images/thumbnails/bezoya_thumb.jpg",
-    "logo":"images/logos/bezoya_logo.png",
-    "ids":{
-      "campaign":"f023812f10244193673c4a7e4682c0e0",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
     "name":"Trenitalia",
-    "geo":"it",
+    "geo":"italy",
     "type":"display",
     "iab":"travel",
     "thumbnail":"images/thumbnails/trenitalia_thumb.jpg",
@@ -963,7 +482,7 @@
   },
   {
     "name":"Samsung",
-    "geo":"it",
+    "geo":"italy",
     "type":"sponsor post",
     "iab":"technology",
     "thumbnail":"images/thumbnails/samsung2_thumb.jpg",
@@ -1001,7 +520,7 @@
   },
   {
     "name":"Air France",
-    "geo":"fr",
+    "geo":"france",
     "type":"display",
     "iab":"travel",
     "thumbnail":"images/thumbnails/aifrance2_thumb.jpg",
@@ -1014,7 +533,7 @@
   },
   {
     "name":"American Tourister",
-    "geo":"fr",
+    "geo":"france",
     "type":"display",
     "iab":"travel",
     "thumbnail":"images/thumbnails/americantourister_thumb.jpg",
@@ -1027,7 +546,7 @@
   },
   {
     "name":"Kenzo",
-    "geo":"fr",
+    "geo":"france",
     "type":"video",
     "iab":"mode-beauty",
     "thumbnail":"images/thumbnails/kenzo_thumb.jpg",
@@ -1040,7 +559,7 @@
   },
   {
     "name":"BMW",
-    "geo":"fr",
+    "geo":"france",
     "type":"video",
     "iab":"automotive",
     "thumbnail":"images/thumbnails/bmw_thumb.jpg",
@@ -1066,26 +585,13 @@
   },
   {
     "name":"Audi",
-    "geo":"fr",
+    "geo":"france",
     "type":"video",
     "iab":"automotive",
-    "thumbnail":"images/thumbnails/audi5_thumb.jpg",
+    "thumbnail":"images/thumbnails/audi_thumb.jpg",
     "logo":"images/logos/audi_logo.png",
     "ids":{
       "campaign":"e092f75cdee7c8004e3fc92d62be46aa",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Royal Canin",
-    "geo":"fr",
-    "type":"display",
-    "iab":"other",
-    "thumbnail":"images/thumbnails/royalcanin2_thumb.jpg",
-    "logo":"images/logos/royalcanin_logo.png",
-    "ids":{
-      "campaign":"6dbb98366d98781b705b12e72db65885",
       "track":"",
       "creative":""
     }
@@ -1104,21 +610,8 @@
     }
   },
   {
-    "name":"Van Cleef & Arpels",
-    "geo":"fr",
-    "type":"display",
-    "iab":"mode-beauty",
-    "thumbnail":"images/thumbnails/vancleef_thumb.jpg",
-    "logo":"images/logos/vancleef_logo.png",
-    "ids":{
-      "campaign":"9aa5a069d9b888f9ce624f084559a592",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
     "name":"Poison Girls",
-    "geo":"fr",
+    "geo":"france",
     "type":"display",
     "iab":"mode-beauty",
     "thumbnail":"images/thumbnails/poisongirl_thumb.jpg",
@@ -1143,21 +636,8 @@
     }
   },
   {
-    "name":"Citroen DS3",
-    "geo":"fr",
-    "type":"display",
-    "iab":"automotive",
-    "thumbnail":"images/thumbnails/ds3_thumb.jpg",
-    "logo":"images/logos/ds3_logo.png",
-    "ids":{
-      "campaign":"f6e5c2ed162002f890b3102e06f2b38f",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
     "name":"ING",
-    "geo":"fr",
+    "geo":"france",
     "type":"display",
     "iab":"economy",
     "thumbnail":"images/thumbnails/ing_thumb.jpg",
@@ -1170,7 +650,7 @@
   },
   {
     "name":"Parrot",
-    "geo":"fr",
+    "geo":"france",
     "type":"display",
     "iab":"technology",
     "thumbnail":"images/thumbnails/parrot_thumb.jpg",
@@ -1183,7 +663,7 @@
   },
   {
     "name":"Carrefour",
-    "geo":"fr",
+    "geo":"france",
     "type":"display",
     "iab":"economy",
     "thumbnail":"images/thumbnails/carrefour_thumb.jpg",
