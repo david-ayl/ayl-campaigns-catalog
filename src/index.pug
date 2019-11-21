@@ -8,7 +8,7 @@ html(lang="fr")
     meta(charset="utf-8")
     title Catalogue de campagnes
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", media="all", href="./styles2/main.css")
+    link(rel="stylesheet", media="all", href="./styles/main.css")
     link(rel="shortcut icon", href="images/favicon.ico", type="image/x-icon")
     body
 
@@ -22,28 +22,38 @@ html(lang="fr")
                 label.checkbox-label(for="checkbox-all-" + item) all
 
       main.cd-main-content
-        div#filters
-          div.logo-container.filter-wrapper
-            img.logo(src="images/logo.png", alt="logo")
+        
+        
+        div#filters-sidebar
           div.filters-container.filter-wrapper
             
-            +filters(["geo", "type", "iab"])
+            +filters(["geo", "iab"])
 
-          div.text-search-container.filter-wrapper
-            div.cd-filter-block
-              form
-                div.cd-filter-content.text-filter-content
-                  input.text-filter-input(type="search", id="text-filter", required)
-                  span.border
-                  label.text-filter-label(for="text-filter") Search :
-        section.cd-gallery
-          ul#campaigns
-          div.cd-fail-message no results
 
-      div#overflay-iframe-container
-        div.iframe-container(scrolling="no", frameborder="0")
-          #close-iframe Close demo
-          iframe.campaign-iframe
+
+        div#main-area
+
+          div#filters-top
+            div.filters-container.filter-wrapper
+              
+              +filters(["type"])
+
+            div.text-search-container.filter-wrapper
+              div.cd-filter-block
+                form
+                  div.cd-filter-content.text-filter-content
+                    input.text-filter-input(type="search", id="text-filter", required)
+                    span.border
+                    label.text-filter-label(for="text-filter") Search :
+
+          section.cd-gallery
+            ul#campaigns
+            div.cd-fail-message no results
+
+        div#overflay-iframe-container
+          div.iframe-container(scrolling="no", frameborder="0")
+            #close-iframe Close demo
+            iframe.campaign-iframe
 
       script(src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js", type="text/javascript")
       script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js", type="text/javascript")

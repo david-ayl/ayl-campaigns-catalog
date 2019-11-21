@@ -18,13 +18,25 @@
   }
 }
 
-#filters {
+#main-area{
+  float:left;
+  width: calc(100% - 20%);
+}
+
+#filters-top {
   padding: 10px 50px 20px;
   background-color: darken($dark, 0%);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow:hidden;
+}
+
+#filters-sidebar{
+  float:left;
+  background-color: darken($dark, 0%);
+  height:100vh;
+  width:20%;
 }
 
 .filter-wrapper {
