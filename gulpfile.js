@@ -26,15 +26,6 @@ function css(cb) {
   cb()
 }
 
-
-function css2(cb) {
-  return src('src/styles2/**/*.scss')
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(concat('main.css'))
-    .pipe(dest('dist/styles2/'))
-  cb()
-}
-
 function js(cb) {
   return src('src/scripts/**/*.**')
     .pipe(dest('dist/scripts/'))
@@ -77,10 +68,6 @@ function w(cb) {
     css()
     rl()
   })
-  watch('src/styles2/**/*.scss', () => {
-    css2()
-    rl()
-  })
   watch('src/scripts/**/*.js', () => {
     js()
     rl()
@@ -103,7 +90,7 @@ function rl() {
   server.reload()
 }
 
-const bld = series(clean, html, css, css2, js, images, fonts, part)
+const bld = series(clean, html, css, js, images, fonts, part)
 
 const dev = series(bld, serve, w)
 

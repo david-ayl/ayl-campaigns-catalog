@@ -6,14 +6,14 @@
 	li{
 		display:inline-block;
 		margin-right:1em;
+		&.current label{
+			font-weight:800;
+			border-bottom:4px solid #f5c19a;
+		}
 		label{
 			text-transform: capitalize;
 			border-bottom:0px solid #f5c19a;
 			transition:all .3s ease;
-			&.current{
-				font-weight:800;
-				border-bottom:4px solid #f5c19a;
-			}
 		}
 
     }

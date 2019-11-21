@@ -74,9 +74,9 @@ $(document).ready(function() {
 	});
 
 	//top menu current event
-	$("#top_menu li label").first().addClass("current");
-	$("#top_menu li label").click(function(){
-		$("#top_menu li label").removeClass("current");
+	$("#top_menu li").first().addClass("current");
+	$("#top_menu li").click(function(){
+		$("#top_menu li").removeClass("current");
 		$(this).toggleClass("current");
 	});
 

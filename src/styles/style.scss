@@ -317,75 +317,6 @@
 
 
 
-//HERO-WRAP
-.hero-wrap{
-	width: 100%;
-	height: 100%;
-	position: relative;
-	z-index: 0;
-	.overlay{
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		content: '';
-		opacity: 0;
-		background: $white;
-		z-index: 0;
-	}
-	.author-info, .author-image{
-		width: 50%;
-	}
-	.author-info{
-		@include media-breakpoint-down(sm){
-			width: 65%;
-		}
-	}
-	.author-image{
-		@include media-breakpoint-down(sm){
-			width: 35%;
-		}
-	}
-	.text{
-		.desc{
-			@include media-breakpoint-up(md){
-				margin-left: -100px;
-				background: $white;
-				padding: 3em;
-			}
-		}
-	}
-	.text{
-		z-index: 1;
-		font-size: 18px;
-		font-weight: 500;
-		.img{
-			width: 200px;
-			height: 200px;
-			margin: 0 auto;
-			@include border-radius(50%);
-		}
-		.subheading{
-			font-size: 24px;
-			color: lighten($black,75%);
-			font-weight: 300;
-		}
-		h1{
-			letter-spacing: 1px;
-			font-weight: 900;
-			@include media-breakpoint-down(md){
-				font-size: 22px;
-			}
-		}
-		.btn-custom{
-			font-weight: 400;
-			color: lighten($black,70%);
-			border-bottom: 2px solid lighten($black,70%);
-		}
-	}
-}
-
 
 //PHOTOGRAPHY
 .photography-entry{
@@ -435,35 +366,7 @@
 }
 
 
-.staff{
-	margin-bottom: 60px;
-	.img{
-		height: 270px;
-	}
-	.text{
-		h3{
-			font-size: 18px;
-			margin-bottom: 0;
-			a{
-				color: $black;
-			}
-		}
-		.position{
-			color: lighten($black,70%);
-			display: block;
-		}
-	}
-	.ftco-social-icon{
-		padding: 0;
-		li{
-			list-style: none;
-			margin-right: 10px;
-			span{
-				font-size: 16px;
-			}
-		}
-	}
-}
+
 
 
 //OWL CAROUSEL
@@ -807,48 +710,6 @@
 
 
 
-//BLOG ENTRY
-.blog-entry{
-	margin-bottom: 6em;
-	.img{
-		display: block;
-		height: 400px;
-		&.img-2{
-			height: 330px;
-		}
-	}
-	.text{
-		position: relative;
-		z-index: 0;
-		h3{
-			font-weight: 400;
-			font-size: 28px;
-			a{
-				color: $black;
-			}
-		}
-		.meta-wrap{
-			width: 100%;
-			display: block;
-			.meta{
-				span{
-					font-size: 14px;
-					margin: 0 10px 0 0;
-					color: lighten($black,75%);
-					a{
-						color: $black;
-					}
-				}
-			}
-		}
-	}
-	.text-2{
-		h3{
-			font-size: 18px;
-			font-weight: 700;
-		}
-	}
-}
 
 
 // USEFUL CODE
@@ -1037,42 +898,7 @@ textarea.form-control {
 	}
 }
 
-// Map
 
-#map {
-	// height: 400px;
-	width: 100%;
-	@include media-breakpoint-down(md) {
-		height: 300px;
-	}
-}
-
-
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-box-shadow: 0 0 0 0 rgba($primary, 0.4);
-  }
-  70% {
-      -webkit-box-shadow: 0 0 0 30px rgba($primary, 0);
-  }
-  100% {
-      -webkit-box-shadow: 0 0 0 0 rgba($primary, 0);
-  }
-}
-@keyframes pulse {
-  0% {
-    -moz-box-shadow: 0 0 0 0 rgba($primary, 0.4);
-    box-shadow: 0 0 0 0 rgba($primary, 0.4);
-  }
-  70% {
-      -moz-box-shadow: 0 0 0 30px rgba($primary, 0);
-      box-shadow: 0 0 0 30px rgba($primary, 0);
-  }
-  100% {
-      -moz-box-shadow: 0 0 0 0 rgba($primary, 0);
-      box-shadow: 0 0 0 0 rgba($primary, 0);
-  }
-}
 
 .heading-section{
 	.subheading{
@@ -1208,141 +1034,17 @@ textarea.form-control {
 }
 
 
-//### .block-4
-.contact-section {
-	.contact-info{
-		p{
-			a{
-				color: lighten($black,10%);
-			}
-			span{}
-		}
-	}
-	.info{
-		width: 100%;
-	}
-	.contact-form{
-		width: 100%;
-	}
-}
-.block-9 {
-	.form-control {
-		outline: none!important;
-		box-shadow: none!important;
-		font-size: 15px;
-	}
-	#map {
-	}
-}
 
 
-//### .block-21
-.block-21 {
-	.blog-img{
-		display: block;
-		height: 80px;
-		width: 80px;
-	}
-	.text {
-		width: calc(100% - 100px);
-		.heading {
-			font-size: 16px;
-			a {
-				color: $black;
-				&:hover, &:active, &:focus {
-					color: $primary;
-				}
-			}
-		}
-		.meta {
-			> div {
-				display: inline-block;
-				font-size: 12px;
-				margin-right: 5px;
-				a {
-					color: lighten($black, 50%);
-				}
-			}
-		}
-	}
-}
 
 
-.tagcloud {
-	padding: 0;
-	a {
-		text-transform: uppercase;
-		display: inline-block;
-		padding: 4px 10px;
-		margin-bottom: 7px;
-		margin-right: 4px;
-		border-radius: 4px;
-		color: $black;
-		border: 1px solid #ccc;
-		font-size :11px;
-		&:hover {
-			border: 1px solid #000;
-		}
-	}
-}
 
-.comment-form-wrap {
-	clear: both;
-}
 
-.comment-list {
-	padding: 0;
-	margin: 0;
-	.children {
-		padding: 50px 0 0 40px;
-		margin: 0;
-		float: left;
-		width: 100%;
-	}
-	li {
-		padding: 0;
-		margin: 0 0 30px 0;
-		float: left;
-		width: 100%;
-		clear: both;
-		list-style: none;
-		.vcard {
-			width: 80px;
-			float: left;
-			img {
-				width: 50px;
-				border-radius: 50%;
-			}
-		}
-		.comment-body {
-			float: right;
-			width: calc(100% - 80px);
-			h3 {
-				font-size: 20px;
-			}
-			.meta {
-				text-transform: uppercase;
-				font-size: 13px;
-				letter-spacing: .1em;
-				color: #ccc;
-			}
-			.reply {
-				padding: 5px 10px;
-				background: lighten($black, 90%);
-				color: $black;
-				text-transform: uppercase;
-				font-size: 11px;
-				letter-spacing: .1em;
-				font-weight: 400;
-				border-radius: 4px;
-				&:hover {
-					color: $white;
-					background: lighten($black, 0%);
-				}
-			}
-		}
-	}
-}
+
+
+
+
+
 
 .search-form {
 	background: lighten($black, 98%);
@@ -1364,78 +1066,8 @@ textarea.form-control {
 	}
 }
 
-.subs-wrap{
-	display: block;
-	width: 100%;
-	color: rgba(255,255,255,.7);
-	position: relative;
-	z-index: 0;
-	@include media-breakpoint-down(sm){
-		padding: 20px !important;
-	}
-	.overlay{
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		opacity: .6;
-		background: $black;
-		z-index: -1;
-	}
-	h3{
-		color: $white;
-	}
-}
-.subscribe-form{
-	.form-group {
-		position: relative;
-		margin-bottom: 0;
-		@include border-radius(0);
-		input {
-			background: transparent !important;
-			border: 1px solid transparent;
-			color: rgba(255,255,255,.7) !important;
-			font-size: 16px;
-			@include border-radius(0);
-			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-			  color: rgba(255,255,255,.7) !important;
-			}
-			&::-moz-placeholder { /* Firefox 19+ */
-			  color: rgba(255,255,255,.7) !important;
-			}
-			&:-ms-input-placeholder { /* IE 10+ */
-			  color: rgba(255,255,255,.7) !important;
-			}
-			&:-moz-placeholder { /* Firefox 18- */
-			  color: rgba(255,255,255,.7) !important;
-			}
-		}
-		.form-control{
-			bordeR: 1px solid rgba(255,255,255,.2);
-			font-weight: 500;
-		}
-		.submit{
-			color: $black !important;
-			display: block;
-			width: 100%;
-			height: 52px;
-			font-size: 16px;
-			background: $white !important;
-			@include border-radius(0);
-			&:hover{
-				cursor: pointer;
-			}
-		}
-	}
-	.icon {
-		position: absolute;
-		top: 50%;
-		right: 20px;
-		transform: translateY(-50%);
-		color: rgba(255,255,255,.8);
-	}
-}
+
+
 
 // sidebar
 .sidebar-box {

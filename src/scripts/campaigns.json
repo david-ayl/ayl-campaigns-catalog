@@ -353,7 +353,7 @@
   {
     "name":"Center Parcs",
     "geo":"france",
-    "type":"sponsor post",
+    "type":"content",
     "iab":"travel",
     "thumbnail":"images/thumbnails/centerparcs_thumb.jpg",
     "logo":"images/logos/centerparcs_logo.png",
@@ -483,7 +483,7 @@
   {
     "name":"Samsung",
     "geo":"italy",
-    "type":"sponsor post",
+    "type":"content",
     "iab":"technology",
     "thumbnail":"images/thumbnails/samsung_thumb.jpg",
     "logo":"images/logos/samsung_logo.png",
