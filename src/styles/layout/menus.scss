@@ -6,9 +6,14 @@
 	li{
 		display:inline-block;
 		margin-right:1em;
-		&.current label{
-			font-weight:800;
-			border-bottom:4px solid #f5c19a;
+		input {
+			&:active,
+			&:checked {
+			& + .checkbox-label {
+				font-weight:800;
+				border-bottom:4px solid #f5c19a;
+			}
+			}
 		}
 		label{
 			text-transform: capitalize;
@@ -89,14 +94,19 @@ ul.cd-filters.list{
 			overflow: hidden;
 			font-weight:400;
 			transition:all .5s ease;
+			input {
+			    &:active,
+			    &:checked {
+			      & + .checkbox-label {
+			        font-weight: 800;
+			      }
+			    }
+			}
 			label{
 				font-weight:400;
 				text-transform: uppercase;
 				font-size:.75em;
 				transition:all .5s ease;
-				&:hover{
-					font-weight:800;
-				}
 			}
 			li{
 				margin:10px 0 5px 0 !important;
@@ -111,6 +121,7 @@ ul.cd-filters.list{
 
 	}
 }
+
 
 
 

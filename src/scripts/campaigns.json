@@ -118,7 +118,7 @@
   },
   {
     "name":"Audi (Ad Domain)",
-    "geo":"us / uk",
+    "geo":"us-uk",
     "type":"display",
     "iab":"automotive",
     "thumbnail":"images/thumbnails/audi_thumb.jpg",
@@ -131,7 +131,7 @@
   },
   {
     "name":"Audi (Ad Domain)",
-    "geo":"us / uk",
+    "geo":"us-uk",
     "type":"display",
     "iab":"automotive",
     "thumbnail":"images/thumbnails/audi_thumb.jpg",
@@ -534,7 +534,7 @@
   },
   {
     "name":"American Airlines",
-    "geo":"us / uk",
+    "geo":"us-uk",
     "type":"display",
     "iab":"travel",
     "thumbnail":"images/thumbnails/americanairlines_thumb.jpg",
@@ -560,7 +560,7 @@
   },
   {
     "name":"Ducati",
-    "geo":"us / uk",
+    "geo":"us-uk",
     "type":"display",
     "iab":"automotive",
     "thumbnail":"images/thumbnails/ducati_thumb.jpg",

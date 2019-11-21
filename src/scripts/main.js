@@ -73,13 +73,6 @@ $(document).ready(function() {
 		$(".filters_wrapper").toggleClass("active");
 	});
 
-	//top menu current event
-	$("#top_menu li").first().addClass("current");
-	$("#top_menu li").click(function(){
-		$("#top_menu li").removeClass("current");
-		$(this).toggleClass("current");
-	});
-
 	// magnific popup
 	$('.image-popup').magnificPopup({
 	    closeOnContentClick: true,
