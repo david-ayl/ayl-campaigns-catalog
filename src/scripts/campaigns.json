@@ -1,18 +1,5 @@
 [
   {
-    "name":"Listerine",
-    "geo":"apac",
-    "type":"video",
-    "iab":"other",
-    "thumbnail":"images/thumbnails/listerine_thumb.jpg",
-    "logo":"images/logos/listerine_logo.png",
-    "ids":{
-      "campaign":"b38727cedeafa0a209a26d849f68077d",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
     "name":"Visa",
     "geo":"apac",
     "type":"display",
@@ -351,19 +338,6 @@
     }
   },
   {
-    "name":"Center Parcs",
-    "geo":"france",
-    "type":"content",
-    "iab":"travel",
-    "thumbnail":"images/thumbnails/centerparcs_thumb.jpg",
-    "logo":"images/logos/centerparcs_logo.png",
-    "ids":{
-      "campaign":"12d13f49d9c04aee998f8437aeaa407d",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
     "name":"Adidas",
     "geo":"germany",
     "type":"display",
@@ -476,19 +450,6 @@
     "logo":"images/logos/trenitalia_logo.png",
     "ids":{
       "campaign":"40e255f7f48eebc8bfaa6efadd96f648",
-      "track":"",
-      "creative":""
-    }
-  },
-  {
-    "name":"Samsung",
-    "geo":"italy",
-    "type":"content",
-    "iab":"technology",
-    "thumbnail":"images/thumbnails/samsung_thumb.jpg",
-    "logo":"images/logos/samsung_logo.png",
-    "ids":{
-      "campaign":"5cef79388bc1b6bb502e4af660cdde4c",
       "track":"",
       "creative":""
     }

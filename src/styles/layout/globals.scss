@@ -59,6 +59,20 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: $black;
+  &.offcanvas {
+    overflow-x: hidden;
+    #colorlib-aside {
+      @include translateX(0);
+      width: 270px;
+      background: $primary;
+      z-index: 999;
+      position: fixed;
+    }
+    #colorlib-main, .colorlib-nav-toggle {
+      top: 0;
+      @include translateX(270px);
+    }
+  }
 }
 a {
   transition: .3s all ease;

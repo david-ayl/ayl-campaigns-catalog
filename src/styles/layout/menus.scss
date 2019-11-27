@@ -22,6 +22,9 @@
 		}
 
     }
+    @media screen and (max-width:767px) {
+    	flex-direction:column-reverse;
+  	}
   	#searchform{
   		margin-left:auto;
   		display: flex;
@@ -46,6 +49,9 @@
   				color:#dce2e8;
   			}
   		}
+  		@media screen and (max-width:767px) {
+    		margin:2em auto;
+  		}
   		
   	}
   	#like_filter{
@@ -66,6 +72,10 @@
         &.selected::before{
         	background:#f5c19a;
         }
+        @media screen and (max-width:767px) {
+    		margin-left:auto;
+    		padding-top:10px;
+  		}
     }
 }
 

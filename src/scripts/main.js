@@ -68,6 +68,50 @@ $(document).ready(function() {
   });
 
 ///////V2
+	var burgerMenu = function() {
+
+		$('.js-colorlib-nav-toggle').on('click', function(event){
+			event.preventDefault();
+			var $this = $(this);
+
+			if ($('body').hasClass('offcanvas')) {
+				$this.removeClass('active');
+				$('body').removeClass('offcanvas');	
+			} else {
+				$this.addClass('active');
+				$('body').addClass('offcanvas');	
+			}
+		});
+	};
+	burgerMenu();
+
+	// Click outside of offcanvass
+	var mobileMenuOutsideClick = function() {
+
+		$(document).click(function (e) {
+	    var container = $("#colorlib-aside, .js-colorlib-nav-toggle");
+	    if (!container.is(e.target) && container.has(e.target).length === 0) {
+
+	    	if ( $('body').hasClass('offcanvas') ) {
+
+    			$('body').removeClass('offcanvas');
+    			$('.js-colorlib-nav-toggle').removeClass('active');
+			
+	    	}
+	    	
+	    }
+		});
+
+		$(window).scroll(function(){
+			if ( $('body').hasClass('offcanvas') ) {
+    			$('body').removeClass('offcanvas');
+    			$('.js-colorlib-nav-toggle').removeClass('active');
+			
+	    	}
+		});
+
+	};
+	mobileMenuOutsideClick();
 	//sidebar menu toggleClass active
 	$(".filters_wrapper span").click(function(){
 		$(".filters_wrapper").toggleClass("active");
@@ -101,10 +145,15 @@ $(document).ready(function() {
 		 document.execCommand("copy");
 		 $temp.remove();
 	}
-  	$("#campaigns").click(function(){
+  	$(".copy").click(function(){
   		var copied = $(event.target).closest("li").find(".campaign_id");
   		copyToClipboard(copied);
+  		$("#errormessage").slideDown().text("Copied");
+  		setTimeout(function(){
+			$('#errormessage').slideUp();
+		}, 2000);
   	})
+
 
   	//like svg on click event
   	$(".like").click(function(){
@@ -118,10 +167,10 @@ $(document).ready(function() {
 	  			$(".cd-gallery li.checked").show();
   			} else {
   				$(this).removeClass("selected");
-  				$("#errormessage").slideDown().text("No fav").append("<a href='#' id='close'></a>");
-  				$("#close").click(function(){
-  					$("#errormessage").slideUp();
-  				})
+  				$("#errormessage").slideDown().text("No fav");
+  				setTimeout(function(){
+					$('#errormessage').slideUp();
+				}, 2000);
   			}
   			
   		} else {
