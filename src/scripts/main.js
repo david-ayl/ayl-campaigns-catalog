@@ -154,11 +154,34 @@ $(document).ready(function() {
 		}, 2000);
   	})
 
+  	//get liked-items from local storage
+  	if(localStorage.getItem('liked-items')){
+   		$("#campaigns").html(localStorage.getItem('liked-items'));
+  	}
 
   	//like svg on click event
   	$(".like").click(function(){
   		$(this).toggleClass("selected");
   		$(this).closest("li").toggleClass("checked");
+  	})
+  	//save to localstorage event
+  	$("#campaigns .like").click(function(){
+  		//save changes to localstorage
+    	localStorage.setItem('liked-items', $("#campaigns").html());
+  		$("#errormessage").slideDown().text("Added to fav list");
+  		setTimeout(function(){
+			$('#errormessage').slideUp();
+		}, 2000);
+  	})
+
+  	//remove from fav list event
+  	$("#campaigns .like.selected").click(function(){
+  		//save changes to localstorage
+    	localStorage.setItem('liked-items', $("#campaigns").html());
+  		$("#errormessage").slideDown().text("Removed from fav list");
+  		setTimeout(function(){
+			$('#errormessage').slideUp();
+		}, 2000);
   	})
   	$("#like_filter").click(function(){
   		if (($("#like_filter").hasClass("selected"))){
@@ -174,8 +197,6 @@ $(document).ready(function() {
   			}
   			
   		} else {
-  			$(".cd-gallery li").removeClass("checked");
-  			$(".cd-gallery li .like").removeClass("selected");
   			$(".cd-gallery li").show();
   		}
   	})
