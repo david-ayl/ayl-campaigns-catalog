@@ -5,6 +5,9 @@
     	overflow:hidden;
     	position:relative;
         display: none;
+        &.removed_fav{
+            display:none !important;
+        }
     	a, .overlay {
     		border-radius:10px;
     		.text{

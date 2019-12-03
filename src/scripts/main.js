@@ -159,6 +159,7 @@ $(document).ready(function() {
   			if($(".cd-gallery li").hasClass("checked")){
 	  			$(".cd-gallery li").hide();
 	  			$(".cd-gallery li.checked").show();
+	  			$("#campaigns").addClass("fav_view");
   			} else {
   				$(this).removeClass("selected");
   				$("#errormessage").slideDown().text("No fav");
@@ -168,7 +169,11 @@ $(document).ready(function() {
   			}
   			
   		} else {
+  			$("#campaigns").removeClass("fav_view");
+  			$(".cd-gallery li").removeClass("removed_fav");
   			$(".cd-gallery li").show();
+  			//refresh local storage with right values
+  			localStorage.setItem('liked-items', $("#campaigns").html());
   		}
   	});
 
@@ -210,6 +215,13 @@ function initMix() {
 	  		setTimeout(function(){
 				$('#errormessage').slideUp();
 			}, 2000);
+  		}
+  		if($("#campaigns").hasClass("fav_view")){
+  			$("div.cd-fail-message").hide();
+  			$(this).closest("li").addClass("removed_fav");
+  			if (!($("#campaigns li").is(":visible"))){
+  				$("div.cd-fail-message").fadeIn(200).text("There is no fav items");
+  			}
   		}
   	});
   	/////////////////
