@@ -144,7 +144,7 @@ $(document).ready(function() {
 		 $temp.val($(element).html()).select();
 		 document.execCommand("copy");
 		 $temp.remove();
-	}
+	};
   	$(".copy").click(function(){
   		var copied = $(event.target).closest("li").find(".campaign_id");
   		copyToClipboard(copied);
@@ -152,37 +152,8 @@ $(document).ready(function() {
   		setTimeout(function(){
 			$('#errormessage').slideUp();
 		}, 2000);
-  	})
+  	});
 
-  	//get liked-items from local storage
-  	if(localStorage.getItem('liked-items')){
-   		$("#campaigns").html(localStorage.getItem('liked-items'));
-  	}
-
-  	//like svg on click event
-  	$(".like").click(function(){
-  		$(this).toggleClass("selected");
-  		$(this).closest("li").toggleClass("checked");
-  	})
-  	//save to localstorage event
-  	$("#campaigns .like").click(function(){
-  		//save changes to localstorage
-    	localStorage.setItem('liked-items', $("#campaigns").html());
-  		$("#errormessage").slideDown().text("Added to fav list");
-  		setTimeout(function(){
-			$('#errormessage').slideUp();
-		}, 2000);
-  	})
-
-  	//remove from fav list event
-  	$("#campaigns .like.selected").click(function(){
-  		//save changes to localstorage
-    	localStorage.setItem('liked-items', $("#campaigns").html());
-  		$("#errormessage").slideDown().text("Removed from fav list");
-  		setTimeout(function(){
-			$('#errormessage').slideUp();
-		}, 2000);
-  	})
   	$("#like_filter").click(function(){
   		if (($("#like_filter").hasClass("selected"))){
   			if($(".cd-gallery li").hasClass("checked")){
@@ -199,7 +170,7 @@ $(document).ready(function() {
   		} else {
   			$(".cd-gallery li").show();
   		}
-  	})
+  	});
 
 
 /////////
@@ -212,6 +183,36 @@ $(document).ready(function() {
 //jQuery(document).ready(function($){ REMOVE_READY
 
 function initMix() {
+
+	////////////////
+
+  	//get liked-items from local storage
+  	if(localStorage.getItem('liked-items')){
+   		$("#campaigns").html(localStorage.getItem('liked-items'));
+  	};
+
+  	//like svg on click event
+  	$(".like").click(function(){
+  		$(this).toggleClass("selected");
+  		$(this).closest("li").toggleClass("checked");
+  	});
+  	//save - removed to localstorage event
+  	$("#campaigns .like").click(function(){
+  		//save changes to localstorage
+    	localStorage.setItem('liked-items', $("#campaigns").html());
+    	if($(this).closest("li").hasClass("checked")){
+	  		$("#errormessage").slideDown().text("Added to fav list");
+	  		setTimeout(function(){
+				$('#errormessage').slideUp();
+			}, 2000);
+  		} else {
+  			$("#errormessage").slideDown().text("Removed to fav list");
+	  		setTimeout(function(){
+				$('#errormessage').slideUp();
+			}, 2000);
+  		}
+  	});
+  	/////////////////
 
 	function triggerFilter($bool) {
 		var elementsToTrigger = $([$('.cd-filter-trigger'), $('.cd-filter'), $('.cd-tab-filter'), $('.cd-gallery')]);
@@ -251,21 +252,7 @@ function initMix() {
 		}
 	});
 
-	//close filter dropdown inside lateral .cd-filter
-	$('.cd-filter-block h4').on('click', function(){
-		$(this).toggleClass('closed').siblings('.cd-filter-content').slideToggle(300);
-	})
 
-	//fix lateral filter and gallery on scrolling
-	$(window).on('scroll', function(){
-		(!window.requestAnimationFrame) ? fixGallery() : window.requestAnimationFrame(fixGallery);
-	});
-
-	function fixGallery() {
-		var offsetTop = $('.cd-main-content').offset().top,
-			scrollTop = $(window).scrollTop();
-		( scrollTop >= offsetTop ) ? $('.cd-main-content').addClass('is-fixed') : $('.cd-main-content').removeClass('is-fixed');
-	}
 
 	/************************************
 		MitItUp filter settings
