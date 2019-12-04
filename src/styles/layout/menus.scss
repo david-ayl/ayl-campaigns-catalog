@@ -34,8 +34,8 @@
 			display: inline-block;
 			content: '';
 			background:#000;
-			-webkit-mask: url(../../images/icons/search.svg) no-repeat 50% 50%;
-    		mask: url(../../images/icons/search.svg) no-repeat 50% 50%;
+			-webkit-mask: url(../images/icons/search.svg) no-repeat 50% 50%;
+    		mask: url(../images/icons/search.svg) no-repeat 50% 50%;
    			-webkit-mask-size: cover;
     		mask-size: cover;
     	}
@@ -64,8 +64,8 @@
             display: inline-block;
             content: '';
             background:#000;
-            -webkit-mask: url(../../images/icons/heart.svg) no-repeat 50% 50%;
-            mask: url(../../images/icons/heart.svg) no-repeat 50% 50%;
+            -webkit-mask: url(../images/icons/heart.svg) no-repeat 50% 50%;
+            mask: url(../images/icons/heart.svg) no-repeat 50% 50%;
             -webkit-mask-size: cover;
             mask-size: cover;
         }
