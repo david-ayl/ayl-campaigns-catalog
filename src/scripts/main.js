@@ -35,7 +35,6 @@ $.get("scripts/campaigns.json", function(campaigns) {
 $(document).ready(function() {
 
 
-
   var displayCamp = function(e) {
     var el = e.target
     var campId = $(el).closest('li').find('.id').html();
@@ -118,24 +117,26 @@ $(document).ready(function() {
 	});
 
 	// magnific popup
-	$('.image-popup').magnificPopup({
-	    closeOnContentClick: true,
-	    closeBtnInside: false,
-	    fixedContentPos: true,
-	    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-	    items: {
-	    	src:$("<iframe class='campaign-iframe' frameborder='0' scrolling='no'></iframe>"),
-	    	type: "inline"
-	    },
-	    callbacks: {
-		    open: function() {
-		     	displayCamp
+	setTimeout(function(){
+		$('.image-popup').magnificPopup({
+		    closeOnContentClick: true,
+		    closeBtnInside: false,
+		    fixedContentPos: true,
+		    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		    items: {
+		    	src:$("<iframe class='campaign-iframe' frameborder='0' scrolling='no'></iframe>"),
+		    	type: "inline"
 		    },
-		    close: function() {
-		      	removeCamp
-		    }
-	  	}
-  	});
+		    callbacks: {
+			    open: function() {
+			     	displayCamp
+			    },
+			    close: function() {
+			      	removeCamp
+			    }
+		  	}
+	  	});
+	},2000);
 
   	//copy to clipboard event on items
   	function copyToClipboard(element) {
