@@ -16,6 +16,6 @@ $( document ).ready(function() {
 			$('#errormessage').slideUp();
 		}, 2000);
   	});
-  	}, 2000);
+  	}, 1000);
 });
 
