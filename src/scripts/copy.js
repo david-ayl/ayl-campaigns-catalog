@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+	setTimeout(function(){ 
     //copy to clipboard event on items
   	function copyToClipboard(element) {
 		 var $temp = $("<input>");
@@ -15,5 +16,6 @@ $( document ).ready(function() {
 			$('#errormessage').slideUp();
 		}, 2000);
   	});
+  	}, 2000);
 });
 
