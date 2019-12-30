@@ -138,7 +138,22 @@ $(document).ready(function() {
 	  	});
 	},2000);
 
-  	
+  	//copy to clipboard event on items
+  	function copyToClipboard(element) {
+		 var $temp = $("<input>");
+		 $("body").append($temp);
+		 $temp.val($(element).html()).select();
+		 document.execCommand("copy");
+		 $temp.remove();
+	};
+  	$(".copy").click(function(){
+  		var copied = $(event.target).closest("li").find(".campaign_id");
+  		copyToClipboard(copied);
+  		$("#errormessage").slideDown().text("Copied");
+  		setTimeout(function(){
+			$('#errormessage').slideUp();
+		}, 2000);
+  	});
 
   	$("#like_filter").click(function(){
   		if (($("#like_filter").hasClass("selected"))){
@@ -176,22 +191,6 @@ $(document).ready(function() {
 function initMix() {
 
 	////////////////
-	//copy to clipboard event on items
-  	function copyToClipboard(element) {
-		 var $temp = $("<input>");
-		 $("body").append($temp);
-		 $temp.val($(element).html()).select();
-		 document.execCommand("copy");
-		 $temp.remove();
-	};
-  	$(".copy").click(function(){
-  		var copied = $(event.target).closest("li").find(".campaign_id");
-  		copyToClipboard(copied);
-  		$("#errormessage").slideDown().text("Copied");
-  		setTimeout(function(){
-			$('#errormessage').slideUp();
-		}, 2000);
-  	});
 
   	//get liked-items from local storage
   	if(localStorage.getItem('liked-items')){
