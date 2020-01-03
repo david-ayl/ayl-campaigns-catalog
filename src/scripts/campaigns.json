@@ -55,7 +55,7 @@
     "name":"VanCleef",
     "geo":"apac",
     "type":"display",
-    "iab":"mode-beauty",
+    "iab":"fashion-beauty",
     "thumbnail":"images/thumbnails/vancleef_thumb.jpg",
     "logo":"images/logos/vancleef_logo.png",
     "ids":{
@@ -68,7 +68,7 @@
     "name":"Chanel",
     "geo":"apac",
     "type":"display",
-    "iab":"mode-beauty",
+    "iab":"fashion-beauty",
     "thumbnail":"images/thumbnails/chanel_thumb.jpg",
     "logo":"images/logos/chanel_logo.png",
     "ids":{
@@ -172,7 +172,7 @@
     "name":"TOUS",
     "geo":"spain",
     "type":"display",
-    "iab":"luxe",
+    "iab":"luxury",
     "thumbnail":"images/thumbnails/tous_thumb.jpg",
     "logo":"images/logos/tous_logo.png",
     "ids":{
@@ -250,7 +250,7 @@
     "name":"Thomas Sabo",
     "geo":"germany",
     "type":"display",
-    "iab":"luxe",
+    "iab":"luxury",
     "thumbnail":"images/thumbnails/thomassabo_thumb.jpg",
     "logo":"images/logos/thomassabo_logo.png",
     "ids":{
@@ -302,7 +302,7 @@
     "name":"Desigual",
     "geo":"spain",
     "type":"display",
-    "iab":"mode-beauty",
+    "iab":"fashion-beauty",
     "thumbnail":"images/thumbnails/desigual_thumb.jpg",
     "logo":"images/logos/desigual_logo.png",
     "ids":{
@@ -315,7 +315,7 @@
     "name":"Nivea",
     "geo":"germany",
     "type":"display",
-    "iab":"mode-beauty",
+    "iab":"fashion-beauty",
     "thumbnail":"images/thumbnails/nivea_thumb.jpg",
     "logo":"images/logos/nivea_logo.png",
     "ids":{
@@ -380,7 +380,7 @@
     "name":"Tiffany & Co.",
     "geo":"france",
     "type":"video",
-    "iab":"luxe",
+    "iab":"luxury",
     "thumbnail":"images/thumbnails/tiffany_thumb.jpg",
     "logo":"images/logos/tiffany_logo.png",
     "ids":{
@@ -393,7 +393,7 @@
     "name":"Cartier",
     "geo":"france",
     "type":"display",
-    "iab":"luxe",
+    "iab":"luxury",
     "thumbnail":"images/thumbnails/cartier_thumb.jpg",
     "logo":"images/logos/cartier_logo.png",
     "ids":{
@@ -510,7 +510,7 @@
     "name":"Poison Girls",
     "geo":"france",
     "type":"display",
-    "iab":"mode-beauty",
+    "iab":"fashion-beauty",
     "thumbnail":"images/thumbnails/poisongirl_thumb.jpg",
     "logo":"images/logos/dior_logo.png",
     "ids":{

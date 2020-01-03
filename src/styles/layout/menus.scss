@@ -10,7 +10,7 @@
 			&:active,
 			&:checked {
 			& + .checkbox-label {
-				font-weight:800;
+				color:#f5c19a;
 				border-bottom:4px solid #f5c19a;
 			}
 			}
@@ -108,7 +108,7 @@ ul.cd-filters.list{
 			    &:active,
 			    &:checked {
 			      & + .checkbox-label {
-			        font-weight: 800;
+			        color:#f5c19a;
 			      }
 			    }
 			}
@@ -122,9 +122,6 @@ ul.cd-filters.list{
 				margin:10px 0 5px 0 !important;
 			}
 		}
-	&.active{
-		font-weight:800;
-	}
 	&.active .cd-filter-block{
 		max-height:100vh !important;
 	}
