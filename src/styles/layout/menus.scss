@@ -10,14 +10,14 @@
 			&:active,
 			&:checked {
 			& + .checkbox-label {
-				color:#f5c19a;
-				border-bottom:4px solid #f5c19a;
+				color:#000;
+				border-bottom:4px solid #000;
 			}
 			}
 		}
 		label{
 			text-transform: capitalize;
-			border-bottom:0px solid #f5c19a;
+			border-bottom:0px solid #000;
 			transition:all .3s ease;
 		}
 
@@ -70,7 +70,7 @@
             mask-size: cover;
         }
         &.selected::before{
-        	background:#f5c19a;
+        	background:#000;
         }
         @media screen and (max-width:767px) {
     		margin-left:auto;
@@ -108,7 +108,8 @@ ul.cd-filters.list{
 			    &:active,
 			    &:checked {
 			      & + .checkbox-label {
-			        color:#f5c19a;
+			        color:#000;
+			        font-weight: 800;
 			      }
 			    }
 			}

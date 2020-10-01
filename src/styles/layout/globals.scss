@@ -1,28 +1,42 @@
 @font-face {
-  font-family: 'Gotham';
-  src: url('../fonts/Gotham-Medium.eot');
-  src: url('../fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Gotham-Medium.svg#Gotham-Ultra') format('svg'),
-       url('../fonts/Gotham-Medium.ttf') format('truetype'),
-       url('../fonts/Gotham-Medium.woff') format('woff'),
-       url('../fonts/Gotham-Medium.woff2') format('woff2');
-  font-weight: normal;
+  font-family: 'Eina01';
+  src: url('../fonts/Eina01-Regular.eot');
+  src: url('../fonts/Eina01-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Eina01-Regular.svg#Eina01-Regular') format('svg'),
+       url('../fonts/Eina01-Regular.ttf') format('truetype'),
+       url('../fonts/Eina01-Regular.woff') format('woff'),
+       url('../fonts/Eina01-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gotham';
-  src: url('../fonts/Gotham-Ultra.eot');
-  src: url('../fonts/Gotham-Ultra.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Gotham-Ultra.svg#Gotham-Ultra') format('svg'),
-       url('../fonts/Gotham-Ultra.ttf') format('truetype'),
-       url('../fonts/Gotham-Ultra.woff') format('woff'),
-       url('../fonts/Gotham-Ultra.woff2') format('woff2');
-  font-weight: bold;
+  font-family: 'Eina01';
+  src: url('../fonts/Eina01-SemiBold.eot');
+  src: url('../fonts/Eina01-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Eina01-SemiBold.svg#Eina01-SemiBold') format('svg'),
+       url('../fonts/Eina01-SemiBold.ttf') format('truetype'),
+       url('../fonts/Eina01-SemiBold.woff') format('woff'),
+       url('../fonts/Eina01-SemiBold.woff2') format('woff2');
+  font-weight: 600;
   font-style: normal;
 }
 
-$font-primary: 'Gotham',Arial, sans-serif;
+
+
+@font-face {
+  font-family: 'Eina01';
+  src: url('../fonts/Eina01-Bold.eot');
+  src: url('../fonts/Eina01-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Eina01-Bold.svg#Eina01-Bold') format('svg'),
+       url('../fonts/Eina01-Bold.ttf') format('truetype'),
+       url('../fonts/Eina01-Bold.woff') format('woff'),
+       url('../fonts/Eina01-Bold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+$font-primary: 'Eina01',Arial, sans-serif;
 
 $white: #fff;
 $black: #000000;

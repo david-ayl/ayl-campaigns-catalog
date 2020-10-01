@@ -71,7 +71,7 @@
 		}
 		span{
 			display: block;
-			font-weight:400 !important;
+			font-weight:600 !important;
 			font-size: 100px;
 			line-height: 1.0;
 		}
@@ -151,6 +151,7 @@
 				&.colorlib-active {
 					a {
 						color: $black;
+						font-weight: 600;
 						&:after {
 							visibility: visible;
 							-webkit-transform: scaleX(1);
